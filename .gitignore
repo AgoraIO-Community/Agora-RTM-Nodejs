@@ -1,3 +1,6 @@
+include
+dist
+
 # Logs
 logs
 *.log

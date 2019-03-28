@@ -1,0 +1,79 @@
+{
+  "name": "agora-node-rtm",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Agora RTM in NodeJS",
+  "repository": {
+    "type": "git",
+    "url": "#"
+  },
+  "gypfile": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --forceExit",
+    "build:addon": "node-gyp rebuild",
+    "build:debug": "node-gyp rebuild --debug && mv build/Debug build/Release",
+    "build:ts": "tsc"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-typescript"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "absoluteRuntime": false,
+          "corejs": false,
+          "helpers": true,
+          "regenerator": true,
+          "useESModules": false
+        }
+      ]
+    ],
+    "env": {
+      "test": {
+        "presets": [
+          "@babel/preset-env"
+        ]
+      }
+    }
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ],
+      [
+        "@pika/plugin-build-types"
+      ]
+    ]
+  },
+  "dependencies": {
+    "@babel/core": "7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/preset-env": "7.3.4",
+    "@babel/preset-typescript": "7.3.3",
+    "@babel/runtime": "^7.4.2",
+    "@pika/pack": "0.3.5",
+    "@pika/plugin-build-node": "0.3.14",
+    "@pika/plugin-build-types": "0.3.14",
+    "@pika/plugin-build-web": "0.3.14",
+    "@pika/plugin-standard-pkg": "0.3.14",
+    "@types/jest": "24.0.11",
+    "@types/node": "^11.11.3",
+    "jest": "24.4.0",
+    "nan": "^2.13.0",
+    "typescript": "3.3.3333"
+  },
+  "devDependencies": {}
+}

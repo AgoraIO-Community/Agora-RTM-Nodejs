@@ -1,0 +1,465 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AGORA_API	sdk/includes/AgoraBase.h	18;"	d
+AGORA_API	sdk/includes/AgoraBase.h	20;"	d
+AGORA_API	sdk/includes/AgoraBase.h	23;"	d
+AGORA_API	sdk/includes/AgoraBase.h	26;"	d
+AGORA_API	sdk/includes/AgoraBase.h	29;"	d
+AGORA_BASE_H	sdk/includes/AgoraBase.h	7;"	d
+AGORA_CALL	sdk/includes/AgoraBase.h	16;"	d
+AGORA_CALL	sdk/includes/AgoraBase.h	24;"	d
+AGORA_CALL	sdk/includes/AgoraBase.h	27;"	d
+AGORA_CALL	sdk/includes/AgoraBase.h	30;"	d
+AGORA_IID_AUDIO_DEVICE_MANAGER	sdk/includes/AgoraBase.h	/^    AGORA_IID_AUDIO_DEVICE_MANAGER = 1,$/;"	e	enum:agora::INTERFACE_ID_TYPE
+AGORA_IID_MEDIA_ENGINE	sdk/includes/AgoraBase.h	/^    AGORA_IID_MEDIA_ENGINE = 4,$/;"	e	enum:agora::INTERFACE_ID_TYPE
+AGORA_IID_RTC_ENGINE_PARAMETER	sdk/includes/AgoraBase.h	/^    AGORA_IID_RTC_ENGINE_PARAMETER = 3,$/;"	e	enum:agora::INTERFACE_ID_TYPE
+AGORA_IID_SIGNALING_ENGINE	sdk/includes/AgoraBase.h	/^    AGORA_IID_SIGNALING_ENGINE = 8,$/;"	e	enum:agora::INTERFACE_ID_TYPE
+AGORA_IID_VIDEO_DEVICE_MANAGER	sdk/includes/AgoraBase.h	/^    AGORA_IID_VIDEO_DEVICE_MANAGER = 2,$/;"	e	enum:agora::INTERFACE_ID_TYPE
+AGORA_NODE_ASYNC_QUEUE_H	node_async_queue.h	11;"	d
+AGORA_NODE_NAPI_API_H	node_napi_api.h	11;"	d
+AGORA_NODE_UID_H	node_uid.h	12;"	d
+AGORA_SERVICE_H	sdk/includes/IAgoraService.h	7;"	d
+APP_ID	rtm_controller.cc	/^const std::string APP_ID = "f4637604af81440596a54254d53ade20";$/;"	v
+AString	sdk/includes/AgoraBase.h	/^typedef AutoPtr<IString> AString;$/;"	t	namespace:agora::util
+AgoraServiceContext	sdk/includes/IAgoraService.h	/^struct AgoraServiceContext$/;"	s	namespace:agora::base
+AutoPtr	sdk/includes/AgoraBase.h	/^    AutoPtr(pointer_type p=0)$/;"	f	class:agora::util::AutoPtr
+AutoPtr	sdk/includes/AgoraBase.h	/^class AutoPtr {$/;"	c	namespace:agora::util
+BEGIN_PROPERTY_DEFINE	node_napi_api.h	114;"	d
+CHANNEL_MESSAGE_RECEIVED_BY_SERVER	sdk/includes/IAgoraRtmService.h	/^            CHANNEL_MESSAGE_RECEIVED_BY_SERVER = 1,$/;"	e	enum:agora::rtm::CHANNEL_MESSAGE_STATE
+CHANNEL_MESSAGE_SENT_TIMEOUT	sdk/includes/IAgoraRtmService.h	/^            CHANNEL_MESSAGE_SENT_TIMEOUT = 3,$/;"	e	enum:agora::rtm::CHANNEL_MESSAGE_STATE
+CHANNEL_MESSAGE_STATE	sdk/includes/IAgoraRtmService.h	/^        enum CHANNEL_MESSAGE_STATE {$/;"	g	namespace:agora::rtm
+COMMAND_JS_CALLBACK_FAIL	rtm_controller.cc	125;"	d	file:
+COMMAND_JS_CALLBACK_SUCCESS	rtm_controller.cc	115;"	d	file:
+CONNECTION_STATE	sdk/includes/IAgoraRtmService.h	/^        enum CONNECTION_STATE {$/;"	g	namespace:agora::rtm
+CONNECTION_STATE_ABORTED	sdk/includes/IAgoraRtmService.h	/^            CONNECTION_STATE_ABORTED = 3,$/;"	e	enum:agora::rtm::CONNECTION_STATE
+CONNECTION_STATE_CONNECTED	sdk/includes/IAgoraRtmService.h	/^            CONNECTION_STATE_CONNECTED = 1,$/;"	e	enum:agora::rtm::CONNECTION_STATE
+CONNECTION_STATE_DISCONNECTED	sdk/includes/IAgoraRtmService.h	/^            CONNECTION_STATE_DISCONNECTED = 2,$/;"	e	enum:agora::rtm::CONNECTION_STATE
+CommandPrivData	rtm_controller.h	/^  struct CommandPrivData$/;"	s	class:agora::lb_linux_sdk::RtmServerController
+DECLARE_CLASS	node_napi_api.h	105;"	d
+DEFINE_CLASS	node_napi_api.h	108;"	d
+EN_PROPERTY_DEFINE	node_napi_api.h	124;"	d
+ERROR_CODE_TYPE	sdk/includes/AgoraBase.h	/^enum ERROR_CODE_TYPE$/;"	g	namespace:agora
+ERR_ABORTED	sdk/includes/AgoraBase.h	/^    ERR_ABORTED = 20,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_ANDROID_JNI_JAVA_RECORD_ERROR	sdk/includes/AgoraBase.h	/^    ERR_ADM_ANDROID_JNI_JAVA_RECORD_ERROR = 1115,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_ANDROID_JNI_JAVA_RESOURCE	sdk/includes/AgoraBase.h	/^    ERR_ADM_ANDROID_JNI_JAVA_RESOURCE = 1101,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_ANDROID_JNI_JAVA_START_PLAYBACK	sdk/includes/AgoraBase.h	/^    ERR_ADM_ANDROID_JNI_JAVA_START_PLAYBACK = 1112,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_ANDROID_JNI_JAVA_START_RECORD	sdk/includes/AgoraBase.h	/^    ERR_ADM_ANDROID_JNI_JAVA_START_RECORD = 1111,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_ANDROID_JNI_NO_PLAYBACK_FREQUENCY	sdk/includes/AgoraBase.h	/^    ERR_ADM_ANDROID_JNI_NO_PLAYBACK_FREQUENCY = 1109,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_ANDROID_JNI_NO_RECORD_FREQUENCY	sdk/includes/AgoraBase.h	/^    ERR_ADM_ANDROID_JNI_NO_RECORD_FREQUENCY = 1108,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_ANDROID_OPENSL_CREATE_AUDIO_PLAYER	sdk/includes/AgoraBase.h	/^    ERR_ADM_ANDROID_OPENSL_CREATE_AUDIO_PLAYER = 1157,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_ANDROID_OPENSL_CREATE_AUDIO_RECORDER	sdk/includes/AgoraBase.h	/^    ERR_ADM_ANDROID_OPENSL_CREATE_AUDIO_RECORDER = 1153,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_ANDROID_OPENSL_CREATE_ENGINE	sdk/includes/AgoraBase.h	/^    ERR_ADM_ANDROID_OPENSL_CREATE_ENGINE = 1151,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_ANDROID_OPENSL_START_PLAYER_THREAD	sdk/includes/AgoraBase.h	/^    ERR_ADM_ANDROID_OPENSL_START_PLAYER_THREAD = 1160,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_ANDROID_OPENSL_START_RECORDER_THREAD	sdk/includes/AgoraBase.h	/^    ERR_ADM_ANDROID_OPENSL_START_RECORDER_THREAD = 1156,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_GENERAL_ERROR	sdk/includes/AgoraBase.h	/^    ERR_ADM_GENERAL_ERROR = 1005,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_INIT_LOOPBACK	sdk/includes/AgoraBase.h	/^    ERR_ADM_INIT_LOOPBACK = 1022,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_INIT_PLAYOUT	sdk/includes/AgoraBase.h	/^    ERR_ADM_INIT_PLAYOUT = 1008,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_INIT_RECORDING	sdk/includes/AgoraBase.h	/^    ERR_ADM_INIT_RECORDING = 1011,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_IOS_ACTIVATE_SESSION_FAIL	sdk/includes/AgoraBase.h	/^    ERR_ADM_IOS_ACTIVATE_SESSION_FAIL = 1206,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_IOS_INPUT_NOT_AVAILABLE	sdk/includes/AgoraBase.h	/^    ERR_ADM_IOS_INPUT_NOT_AVAILABLE = 1201,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_IOS_SESSION_SAMPLERATR_ZERO	sdk/includes/AgoraBase.h	/^    ERR_ADM_IOS_SESSION_SAMPLERATR_ZERO = 1221,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_IOS_SET_RENDER_CALLBACK_FAIL	sdk/includes/AgoraBase.h	/^    ERR_ADM_IOS_SET_RENDER_CALLBACK_FAIL = 1219,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_IOS_VPIO_INIT_FAIL	sdk/includes/AgoraBase.h	/^    ERR_ADM_IOS_VPIO_INIT_FAIL = 1210,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_IOS_VPIO_REINIT_FAIL	sdk/includes/AgoraBase.h	/^    ERR_ADM_IOS_VPIO_REINIT_FAIL = 1213,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_IOS_VPIO_RESTART_FAIL	sdk/includes/AgoraBase.h	/^    ERR_ADM_IOS_VPIO_RESTART_FAIL = 1214,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_JAVA_RESOURCE	sdk/includes/AgoraBase.h	/^    ERR_ADM_JAVA_RESOURCE = 1006,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_NO_PERMISSION	sdk/includes/AgoraBase.h	/^    ERR_ADM_NO_PERMISSION = 1027,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_NO_PLAYOUT_DEVICE	sdk/includes/AgoraBase.h	/^    ERR_ADM_NO_PLAYOUT_DEVICE = 1360,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_NO_RECORDING_DEVICE	sdk/includes/AgoraBase.h	/^    ERR_ADM_NO_RECORDING_DEVICE = 1359,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_RECORD_AUDIO_FAILED	sdk/includes/AgoraBase.h	/^    ERR_ADM_RECORD_AUDIO_FAILED = 1018,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_RECORD_AUDIO_IS_ACTIVE	sdk/includes/AgoraBase.h	/^    ERR_ADM_RECORD_AUDIO_IS_ACTIVE = 1033,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_RUNTIME_PLAYOUT_ERROR	sdk/includes/AgoraBase.h	/^    ERR_ADM_RUNTIME_PLAYOUT_ERROR = 1015,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_RUNTIME_RECORDING_ERROR	sdk/includes/AgoraBase.h	/^    ERR_ADM_RUNTIME_RECORDING_ERROR = 1017,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_SAMPLE_RATE	sdk/includes/AgoraBase.h	/^    ERR_ADM_SAMPLE_RATE = 1007,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_START_LOOPBACK	sdk/includes/AgoraBase.h	/^    ERR_ADM_START_LOOPBACK = 1023,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_START_PLAYOUT	sdk/includes/AgoraBase.h	/^    ERR_ADM_START_PLAYOUT = 1009,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_START_RECORDING	sdk/includes/AgoraBase.h	/^    ERR_ADM_START_RECORDING = 1012,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_STOP_PLAYOUT	sdk/includes/AgoraBase.h	/^    ERR_ADM_STOP_PLAYOUT = 1010,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_STOP_RECORDING	sdk/includes/AgoraBase.h	/^    ERR_ADM_STOP_RECORDING = 1013,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_CORE_CAPTURE_NOT_STARTUP	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_CORE_CAPTURE_NOT_STARTUP = 1314,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_CORE_CREATE_REC_THREAD	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_CORE_CREATE_REC_THREAD = 1311,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_CORE_CREATE_RENDER_THREAD	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_CORE_CREATE_RENDER_THREAD = 1319,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_CORE_INIT	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_CORE_INIT = 1301,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_CORE_INIT_PLAYOUT	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_CORE_INIT_PLAYOUT = 1306,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_CORE_INIT_PLAYOUT_NULL	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_CORE_INIT_PLAYOUT_NULL = 1307,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_CORE_INIT_RECORDING	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_CORE_INIT_RECORDING = 1303,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_CORE_NO_PLAYOUT_DEVICE	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_CORE_NO_PLAYOUT_DEVICE = 1323,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_CORE_NO_RECORDING_DEVICE	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_CORE_NO_RECORDING_DEVICE = 1322,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_CORE_RENDER_NOT_STARTUP	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_CORE_RENDER_NOT_STARTUP = 1320,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_CORE_START_RECORDING	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_CORE_START_RECORDING = 1309,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_WAVE_INIT	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_WAVE_INIT = 1351,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_WAVE_INIT_MICROPHONE	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_WAVE_INIT_MICROPHONE = 1354,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_WAVE_INIT_PLAYOUT	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_WAVE_INIT_PLAYOUT = 1355,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_WAVE_INIT_RECORDING	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_WAVE_INIT_RECORDING = 1353,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_WAVE_INIT_SPEAKER	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_WAVE_INIT_SPEAKER = 1356,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_WAVE_START_PLAYOUT	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_WAVE_START_PLAYOUT = 1358,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ADM_WIN_WAVE_START_RECORDING	sdk/includes/AgoraBase.h	/^    ERR_ADM_WIN_WAVE_START_RECORDING = 1357,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ALREADY_IN_USE	sdk/includes/AgoraBase.h	/^    ERR_ALREADY_IN_USE = 19,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_BIND_SOCKET	sdk/includes/AgoraBase.h	/^    ERR_BIND_SOCKET = 13,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_BITRATE_LIMIT	sdk/includes/AgoraBase.h	/^    ERR_BITRATE_LIMIT = 115,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_BUFFER_TOO_SMALL	sdk/includes/AgoraBase.h	/^    ERR_BUFFER_TOO_SMALL = 6,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_CANCELED	sdk/includes/AgoraBase.h	/^    ERR_CANCELED = 11,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_CLIENT_IS_BANNED_BY_SERVER	sdk/includes/AgoraBase.h	/^    ERR_CLIENT_IS_BANNED_BY_SERVER = 123,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_CONNECTION_INTERRUPTED	sdk/includes/AgoraBase.h	/^    ERR_CONNECTION_INTERRUPTED = 111, \/\/ only used in web sdk$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_CONNECTION_LOST	sdk/includes/AgoraBase.h	/^    ERR_CONNECTION_LOST = 112, \/\/ only used in web sdk$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_DECRYPTION_FAILED	sdk/includes/AgoraBase.h	/^    ERR_DECRYPTION_FAILED = 120,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_ENCRYPTED_STREAM_NOT_ALLOWED_PUBLISH	sdk/includes/AgoraBase.h	/^    ERR_ENCRYPTED_STREAM_NOT_ALLOWED_PUBLISH = 130,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_FAILED	sdk/includes/AgoraBase.h	/^    ERR_FAILED = 1,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_INIT_NET_ENGINE	sdk/includes/AgoraBase.h	/^    ERR_INIT_NET_ENGINE = 21,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_INVALID_APP_ID	sdk/includes/AgoraBase.h	/^    ERR_INVALID_APP_ID = 101,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_INVALID_ARGUMENT	sdk/includes/AgoraBase.h	/^    ERR_INVALID_ARGUMENT = 2,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_INVALID_CHANNEL_NAME	sdk/includes/AgoraBase.h	/^    ERR_INVALID_CHANNEL_NAME = 102,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_INVALID_TOKEN	sdk/includes/AgoraBase.h	/^    ERR_INVALID_TOKEN = 110,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_INVITE_CANT_RECV	sdk/includes/AgoraBase.h	/^    ERR_INVITE_CANT_RECV = 475,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_INVITE_NET	sdk/includes/AgoraBase.h	/^    ERR_INVITE_NET = 472,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_INVITE_OTHER	sdk/includes/AgoraBase.h	/^    ERR_INVITE_OTHER = 470,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_INVITE_PEER_OFFLINE	sdk/includes/AgoraBase.h	/^    ERR_INVITE_PEER_OFFLINE = 473,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_INVITE_REINVITE	sdk/includes/AgoraBase.h	/^    ERR_INVITE_REINVITE = 471,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_INVITE_TIMEOUT	sdk/includes/AgoraBase.h	/^    ERR_INVITE_TIMEOUT = 474,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_JOIN_CHANNEL_OTHER	sdk/includes/AgoraBase.h	/^    ERR_JOIN_CHANNEL_OTHER = 440,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_JOIN_CHANNEL_REJECTED	sdk/includes/AgoraBase.h	/^    ERR_JOIN_CHANNEL_REJECTED = 17,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LEAVE_CHANNEL_BYUSER	sdk/includes/AgoraBase.h	/^    ERR_LEAVE_CHANNEL_BYUSER = 462,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LEAVE_CHANNEL_DISCONNECTED	sdk/includes/AgoraBase.h	/^    ERR_LEAVE_CHANNEL_DISCONNECTED = 464,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LEAVE_CHANNEL_KICKED	sdk/includes/AgoraBase.h	/^    ERR_LEAVE_CHANNEL_KICKED = 461,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LEAVE_CHANNEL_LOGOUT	sdk/includes/AgoraBase.h	/^    ERR_LEAVE_CHANNEL_LOGOUT = 463,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LEAVE_CHANNEL_OTHER	sdk/includes/AgoraBase.h	/^    ERR_LEAVE_CHANNEL_OTHER = 460,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LEAVE_CHANNEL_REJECTED	sdk/includes/AgoraBase.h	/^    ERR_LEAVE_CHANNEL_REJECTED = 18,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOAD_MEDIA_ENGINE	sdk/includes/AgoraBase.h	/^    ERR_LOAD_MEDIA_ENGINE = 1001,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGIN_ALREADY_LOGIN	sdk/includes/AgoraBase.h	/^    ERR_LOGIN_ALREADY_LOGIN = 428,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGIN_CANCELED	sdk/includes/AgoraBase.h	/^    ERR_LOGIN_CANCELED = 423,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGIN_FAILED	sdk/includes/AgoraBase.h	/^    ERR_LOGIN_FAILED = 422,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGIN_NET	sdk/includes/AgoraBase.h	/^    ERR_LOGIN_NET = 421,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGIN_OLD_VERSION	sdk/includes/AgoraBase.h	/^    ERR_LOGIN_OLD_VERSION = 425,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGIN_OTHER	sdk/includes/AgoraBase.h	/^    ERR_LOGIN_OTHER = 420,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGIN_TOKEN_EXPIRED	sdk/includes/AgoraBase.h	/^    ERR_LOGIN_TOKEN_EXPIRED = 424,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGIN_TOKEN_KICKED	sdk/includes/AgoraBase.h	/^    ERR_LOGIN_TOKEN_KICKED = 427,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGIN_TOKEN_WRONG	sdk/includes/AgoraBase.h	/^    ERR_LOGIN_TOKEN_WRONG = 426,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGOUT_ALREADY_LOGOUT	sdk/includes/AgoraBase.h	/^    ERR_LOGOUT_ALREADY_LOGOUT = 408,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGOUT_KICKED	sdk/includes/AgoraBase.h	/^    ERR_LOGOUT_KICKED = 403,  \/\/ login in other device$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGOUT_NET	sdk/includes/AgoraBase.h	/^    ERR_LOGOUT_NET = 402,  \/\/ network failure$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGOUT_OLDVERSION	sdk/includes/AgoraBase.h	/^    ERR_LOGOUT_OLDVERSION = 406,  \/\/$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGOUT_OTHER	sdk/includes/AgoraBase.h	/^    ERR_LOGOUT_OTHER = 400,  \/\/$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGOUT_PACKET	sdk/includes/AgoraBase.h	/^    ERR_LOGOUT_PACKET = 404,  \/\/$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGOUT_TOKEN_EXPIRED	sdk/includes/AgoraBase.h	/^    ERR_LOGOUT_TOKEN_EXPIRED = 405,  \/\/ token expired$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGOUT_TOKEN_WRONG	sdk/includes/AgoraBase.h	/^    ERR_LOGOUT_TOKEN_WRONG = 407,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_LOGOUT_USER	sdk/includes/AgoraBase.h	/^    ERR_LOGOUT_USER = 401,  \/\/ logout by user$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_NET_DOWN	sdk/includes/AgoraBase.h	/^    ERR_NET_DOWN = 14,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_NET_NOBUFS	sdk/includes/AgoraBase.h	/^    ERR_NET_NOBUFS = 15,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_NOT_INITIALIZED	sdk/includes/AgoraBase.h	/^    ERR_NOT_INITIALIZED = 7,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_NOT_IN_CHANNEL	sdk/includes/AgoraBase.h	/^    ERR_NOT_IN_CHANNEL = 113,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_NOT_READY	sdk/includes/AgoraBase.h	/^    ERR_NOT_READY = 3,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_NOT_SUPPORTED	sdk/includes/AgoraBase.h	/^    ERR_NOT_SUPPORTED = 4,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_NO_PERMISSION	sdk/includes/AgoraBase.h	/^    ERR_NO_PERMISSION = 9,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_OK	sdk/includes/AgoraBase.h	/^    ERR_OK = 0,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_QUERY_USERNUM_BYUSER	sdk/includes/AgoraBase.h	/^    ERR_QUERY_USERNUM_BYUSER = 452,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_QUERY_USERNUM_OTHER	sdk/includes/AgoraBase.h	/^    ERR_QUERY_USERNUM_OTHER = 450,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_QUERY_USERNUM_TIMEOUT	sdk/includes/AgoraBase.h	/^    ERR_QUERY_USERNUM_TIMEOUT = 451,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_REFUSED	sdk/includes/AgoraBase.h	/^    ERR_REFUSED = 5,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_RESOURCE_LIMITED	sdk/includes/AgoraBase.h	/^    ERR_RESOURCE_LIMITED = 22,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_SEND_MESSAGE_OTHER	sdk/includes/AgoraBase.h	/^    ERR_SEND_MESSAGE_OTHER = 440,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_SEND_MESSAGE_TIMEOUT	sdk/includes/AgoraBase.h	/^    ERR_SEND_MESSAGE_TIMEOUT = 441,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_SET_CLIENT_ROLE_NOT_AUTHORIZED	sdk/includes/AgoraBase.h	/^    ERR_SET_CLIENT_ROLE_NOT_AUTHORIZED = 119,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_SIZE_TOO_LARGE	sdk/includes/AgoraBase.h	/^    ERR_SIZE_TOO_LARGE = 114,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_START_CALL	sdk/includes/AgoraBase.h	/^    ERR_START_CALL = 1002,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_START_CAMERA	sdk/includes/AgoraBase.h	/^    ERR_START_CAMERA = 1003,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_START_VIDEO_RENDER	sdk/includes/AgoraBase.h	/^    ERR_START_VIDEO_RENDER = 1004,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_STREAM_MESSAGE_TIMEOUT	sdk/includes/AgoraBase.h	/^    ERR_STREAM_MESSAGE_TIMEOUT = 117,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_TIMEDOUT	sdk/includes/AgoraBase.h	/^    ERR_TIMEDOUT = 10,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_TOKEN_EXPIRED	sdk/includes/AgoraBase.h	/^    ERR_TOKEN_EXPIRED = 109,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_TOO_MANY_DATA_STREAMS	sdk/includes/AgoraBase.h	/^    ERR_TOO_MANY_DATA_STREAMS = 116,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_TOO_OFTEN	sdk/includes/AgoraBase.h	/^    ERR_TOO_OFTEN = 12,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_VCM_ENCODER_ENCODE_ERROR	sdk/includes/AgoraBase.h	/^    ERR_VCM_ENCODER_ENCODE_ERROR = 1602,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_VCM_ENCODER_INIT_ERROR	sdk/includes/AgoraBase.h	/^    ERR_VCM_ENCODER_INIT_ERROR = 1601,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_VCM_ENCODER_SET_ERROR	sdk/includes/AgoraBase.h	/^    ERR_VCM_ENCODER_SET_ERROR = 1603,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_VCM_UNKNOWN_ERROR	sdk/includes/AgoraBase.h	/^    ERR_VCM_UNKNOWN_ERROR = 1600,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_VDM_CAMERA_NOT_AUTHORIZED	sdk/includes/AgoraBase.h	/^    ERR_VDM_CAMERA_NOT_AUTHORIZED = 1501,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_WATERMARKR_INFO	sdk/includes/AgoraBase.h	/^    ERR_WATERMARKR_INFO = 127,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_WATERMARK_ARGB	sdk/includes/AgoraBase.h	/^    ERR_WATERMARK_ARGB = 128,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_WATERMARK_PARAM	sdk/includes/AgoraBase.h	/^    ERR_WATERMARK_PARAM = 124,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_WATERMARK_PATH	sdk/includes/AgoraBase.h	/^    ERR_WATERMARK_PATH = 125,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_WATERMARK_PNG	sdk/includes/AgoraBase.h	/^    ERR_WATERMARK_PNG = 126,$/;"	e	enum:agora::ERROR_CODE_TYPE
+ERR_WATERMARK_READ	sdk/includes/AgoraBase.h	/^    ERR_WATERMARK_READ = 129,$/;"	e	enum:agora::ERROR_CODE_TYPE
+IAgoraService	sdk/includes/IAgoraService.h	/^class IAgoraService$/;"	c	namespace:agora::base
+IChannel	sdk/includes/IAgoraRtmService.h	/^        class IChannel$/;"	c	namespace:agora::rtm
+IChannelAttributes	sdk/includes/IAgoraRtmService.h	/^        class IChannelAttributes$/;"	c	namespace:agora::rtm
+IChannelEventHandler	sdk/includes/IAgoraRtmService.h	/^        class IChannelEventHandler$/;"	c	namespace:agora::rtm
+IChannelMember	sdk/includes/IAgoraRtmService.h	/^        class IChannelMember$/;"	c	namespace:agora::rtm
+IMessage	sdk/includes/IAgoraRtmService.h	/^        class IMessage$/;"	c	namespace:agora::rtm
+INTERFACE_ID_TYPE	sdk/includes/AgoraBase.h	/^enum INTERFACE_ID_TYPE$/;"	g	namespace:agora
+IRtmService	sdk/includes/IAgoraRtmService.h	/^        class IRtmService$/;"	c	namespace:agora::rtm
+IRtmServiceEventHandler	sdk/includes/IAgoraRtmService.h	/^            IRtmServiceEventHandler() {}$/;"	f	class:agora::rtm::IRtmServiceEventHandler
+IRtmServiceEventHandler	sdk/includes/IAgoraRtmService.h	/^        class IRtmServiceEventHandler$/;"	c	namespace:agora::rtm
+IString	sdk/includes/AgoraBase.h	/^class IString {$/;"	c	namespace:agora::util
+Init	rtm_controller.cc	/^void RtmServerController::Init(Local<Object> exports) {$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+InitAll	addon.cc	/^void InitAll(Local<Object> exports){$/;"	f
+JOIN_CHANNEL_ERROR	sdk/includes/IAgoraRtmService.h	/^        enum JOIN_CHANNEL_ERROR {$/;"	g	namespace:agora::rtm
+JOIN_CHANNEL_ERROR_FAILURE	sdk/includes/IAgoraRtmService.h	/^            JOIN_CHANNEL_ERROR_FAILURE = 1,$/;"	e	enum:agora::rtm::JOIN_CHANNEL_ERROR
+LEAVE_CHANNEL_REASON	sdk/includes/IAgoraRtmService.h	/^        enum LEAVE_CHANNEL_REASON {$/;"	g	namespace:agora::rtm
+LEAVE_CHANNEL_REASON_KICKED	sdk/includes/IAgoraRtmService.h	/^            LEAVE_CHANNEL_REASON_KICKED = 2,$/;"	e	enum:agora::rtm::LEAVE_CHANNEL_REASON
+LEAVE_CHANNEL_REASON_QUIT	sdk/includes/IAgoraRtmService.h	/^            LEAVE_CHANNEL_REASON_QUIT = 1,$/;"	e	enum:agora::rtm::LEAVE_CHANNEL_REASON
+LOGIN_ERR_CODE	sdk/includes/IAgoraRtmService.h	/^        enum LOGIN_ERR_CODE {$/;"	g	namespace:agora::rtm
+LOGIN_ERR_INVALID_APP_ID	sdk/includes/IAgoraRtmService.h	/^            LOGIN_ERR_INVALID_APP_ID = 4,$/;"	e	enum:agora::rtm::LOGIN_ERR_CODE
+LOGIN_ERR_INVALID_ARGUMENT	sdk/includes/IAgoraRtmService.h	/^            LOGIN_ERR_INVALID_ARGUMENT = 3,$/;"	e	enum:agora::rtm::LOGIN_ERR_CODE
+LOGIN_ERR_INVALID_TOKEN	sdk/includes/IAgoraRtmService.h	/^            LOGIN_ERR_INVALID_TOKEN = 5,$/;"	e	enum:agora::rtm::LOGIN_ERR_CODE
+LOGIN_ERR_NOT_AUTHORIZED	sdk/includes/IAgoraRtmService.h	/^            LOGIN_ERR_NOT_AUTHORIZED = 7,$/;"	e	enum:agora::rtm::LOGIN_ERR_CODE
+LOGIN_ERR_OK	sdk/includes/IAgoraRtmService.h	/^            LOGIN_ERR_OK = 0,$/;"	e	enum:agora::rtm::LOGIN_ERR_CODE
+LOGIN_ERR_REJECTED	sdk/includes/IAgoraRtmService.h	/^            LOGIN_ERR_REJECTED = 2,  \/\/ ALREADY LOGIN OR NOT INITIALIZED, SERVER REJECT$/;"	e	enum:agora::rtm::LOGIN_ERR_CODE
+LOGIN_ERR_TIMEOUT	sdk/includes/IAgoraRtmService.h	/^            LOGIN_ERR_TIMEOUT = 8,$/;"	e	enum:agora::rtm::LOGIN_ERR_CODE
+LOGIN_ERR_TOKEN_EXPIRED	sdk/includes/IAgoraRtmService.h	/^            LOGIN_ERR_TOKEN_EXPIRED = 6,$/;"	e	enum:agora::rtm::LOGIN_ERR_CODE
+LOGIN_ERR_UNKNOWN	sdk/includes/IAgoraRtmService.h	/^            LOGIN_ERR_UNKNOWN = 1,$/;"	e	enum:agora::rtm::LOGIN_ERR_CODE
+LOGOUT_ERR_CODE	sdk/includes/IAgoraRtmService.h	/^        enum LOGOUT_ERR_CODE {$/;"	g	namespace:agora::rtm
+LOGOUT_ERR_OK	sdk/includes/IAgoraRtmService.h	/^            LOGOUT_ERR_OK = 0,$/;"	e	enum:agora::rtm::LOGOUT_ERR_CODE
+LOGOUT_ERR_REJECTED	sdk/includes/IAgoraRtmService.h	/^            LOGOUT_ERR_REJECTED = 1, $/;"	e	enum:agora::rtm::LOGOUT_ERR_CODE
+LOG_FILTER_CRITICAL	sdk/includes/AgoraBase.h	/^    LOG_FILTER_CRITICAL = 0x0008,$/;"	e	enum:agora::LOG_FILTER_TYPE
+LOG_FILTER_DEBUG	sdk/includes/AgoraBase.h	/^    LOG_FILTER_DEBUG = 0x080f,$/;"	e	enum:agora::LOG_FILTER_TYPE
+LOG_FILTER_ERROR	sdk/includes/AgoraBase.h	/^    LOG_FILTER_ERROR = 0x000c,$/;"	e	enum:agora::LOG_FILTER_TYPE
+LOG_FILTER_INFO	sdk/includes/AgoraBase.h	/^    LOG_FILTER_INFO = 0x000f,$/;"	e	enum:agora::LOG_FILTER_TYPE
+LOG_FILTER_MASK	sdk/includes/AgoraBase.h	/^    LOG_FILTER_MASK = 0x80f,$/;"	e	enum:agora::LOG_FILTER_TYPE
+LOG_FILTER_OFF	sdk/includes/AgoraBase.h	/^    LOG_FILTER_OFF = 0,$/;"	e	enum:agora::LOG_FILTER_TYPE
+LOG_FILTER_TYPE	sdk/includes/AgoraBase.h	/^enum LOG_FILTER_TYPE$/;"	g	namespace:agora
+LOG_FILTER_WARN	sdk/includes/AgoraBase.h	/^    LOG_FILTER_WARN = 0x000e,$/;"	e	enum:agora::LOG_FILTER_TYPE
+MAKE_JS_CALL_0	rtm_controller.cc	25;"	d	file:
+MAKE_JS_CALL_1	rtm_controller.cc	34;"	d	file:
+MAKE_JS_CALL_2	rtm_controller.cc	45;"	d	file:
+MAKE_JS_CALL_3	rtm_controller.cc	57;"	d	file:
+MAKE_JS_CALL_4	rtm_controller.cc	70;"	d	file:
+MAKE_JS_CALL_5	rtm_controller.cc	84;"	d	file:
+MAKE_JS_CALL_6	rtm_controller.cc	99;"	d	file:
+MESSAGE_TYPE	sdk/includes/IAgoraRtmService.h	/^        enum MESSAGE_TYPE {$/;"	g	namespace:agora::rtm
+MESSAGE_TYPE_BINARY	sdk/includes/IAgoraRtmService.h	/^            MESSAGE_TYPE_BINARY = 2,$/;"	e	enum:agora::rtm::MESSAGE_TYPE
+MESSAGE_TYPE_CONVERGE	sdk/includes/IAgoraRtmService.h	/^            MESSAGE_TYPE_CONVERGE = 4,$/;"	e	enum:agora::rtm::MESSAGE_TYPE
+MESSAGE_TYPE_TEXT	sdk/includes/IAgoraRtmService.h	/^            MESSAGE_TYPE_TEXT = 1,$/;"	e	enum:agora::rtm::MESSAGE_TYPE
+MESSAGE_TYPE_UNDEFINED	sdk/includes/IAgoraRtmService.h	/^            MESSAGE_TYPE_UNDEFINED = 0,$/;"	e	enum:agora::rtm::MESSAGE_TYPE
+NAPI_AUTO_LENGTH	node_napi_api.h	127;"	d
+NAPI_MODULE	node_napi_api.h	37;"	d
+NODE_UID_TYPE	node_uid.h	20;"	d
+New	rtm_controller.cc	/^void RtmServerController::New(const Nan::FunctionCallbackInfo<Value> &args) {$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+NodeEventCallback	rtm_controller.h	/^  struct NodeEventCallback$/;"	s	class:agora::lb_linux_sdk::RtmServerController
+NodeString	node_napi_api.h	/^    NodeString()$/;"	f	class:NodeString
+NodeString	node_napi_api.h	/^    NodeString(char* buf)$/;"	f	class:NodeString
+NodeString	node_napi_api.h	/^class NodeString$/;"	c
+NodeUid	node_uid.h	/^            NodeUid(uid_t id)$/;"	f	class:NodeUid
+NodeUid	node_uid.h	/^        class NodeUid$/;"	c
+PEER_MESSAGE_FAILURE	sdk/includes/IAgoraRtmService.h	/^            PEER_MESSAGE_FAILURE = 1,$/;"	e	enum:agora::rtm::PEER_MESSAGE_STATE
+PEER_MESSAGE_INIT	sdk/includes/IAgoraRtmService.h	/^            PEER_MESSAGE_INIT = 0,$/;"	e	enum:agora::rtm::PEER_MESSAGE_STATE
+PEER_MESSAGE_PEER_UNREACHABLE	sdk/includes/IAgoraRtmService.h	/^            PEER_MESSAGE_PEER_UNREACHABLE = 2,$/;"	e	enum:agora::rtm::PEER_MESSAGE_STATE
+PEER_MESSAGE_RECEIVED_BY_PEER	sdk/includes/IAgoraRtmService.h	/^            PEER_MESSAGE_RECEIVED_BY_PEER = 3,$/;"	e	enum:agora::rtm::PEER_MESSAGE_STATE
+PEER_MESSAGE_SENT_TIMEOUT	sdk/includes/IAgoraRtmService.h	/^            PEER_MESSAGE_SENT_TIMEOUT = 4,$/;"	e	enum:agora::rtm::PEER_MESSAGE_STATE
+PEER_MESSAGE_STATE	sdk/includes/IAgoraRtmService.h	/^        enum PEER_MESSAGE_STATE {$/;"	g	namespace:agora::rtm
+PROPERTY_METHOD_DEFINE	node_napi_api.h	122;"	d
+RESPONSE_CODE	sdk/includes/IAgoraRtmService.h	/^        enum RESPONSE_CODE {$/;"	g	namespace:agora::rtm
+RESPONSE_CODE_FAILURE	sdk/includes/IAgoraRtmService.h	/^            RESPONSE_CODE_FAILURE = 2,$/;"	e	enum:agora::rtm::RESPONSE_CODE
+RESPONSE_CODE_SUCCESS	sdk/includes/IAgoraRtmService.h	/^            RESPONSE_CODE_SUCCESS = 1,$/;"	e	enum:agora::rtm::RESPONSE_CODE
+RTM_CONNECTION_STATE_CHANGED	rtm_controller.h	39;"	d
+RTM_LOGIN_FAILURE	rtm_controller.h	37;"	d
+RTM_LOGIN_SUCESS	rtm_controller.h	36;"	d
+RTM_LOGOUT	rtm_controller.h	38;"	d
+RTM_MESSAGE_RECEIVED_FROM_PEER	rtm_controller.h	41;"	d
+RTM_SEND_MESSAGE_STATE	rtm_controller.h	40;"	d
+RtmServer	rtm_server.cpp	/^        RtmServer::RtmServer()  { }$/;"	f	class:agora::lb_linux_sdk::RtmServer
+RtmServer	rtm_server.h	/^class RtmServer : public agora::rtm::IRtmServiceEventHandler {$/;"	c	namespace:agora::lb_linux_sdk
+RtmServerController	rtm_controller.cc	/^RtmServerController::RtmServerController() {$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+RtmServerController	rtm_controller.h	/^class RtmServerController : public Nan::ObjectWrap,$/;"	c	namespace:agora::lb_linux_sdk
+WARN_ADM_GLITCH_STATE	sdk/includes/AgoraBase.h	/^    WARN_ADM_GLITCH_STATE = 1052,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_ADM_IMPROPER_SETTINGS	sdk/includes/AgoraBase.h	/^    WARN_ADM_IMPROPER_SETTINGS = 1053,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_ADM_IOS_CATEGORY_NOT_PLAYANDRECORD	sdk/includes/AgoraBase.h	/^    WARN_ADM_IOS_CATEGORY_NOT_PLAYANDRECORD = 1029,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_ADM_IOS_SAMPLERATE_CHANGE	sdk/includes/AgoraBase.h	/^    WARN_ADM_IOS_SAMPLERATE_CHANGE = 1030,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_ADM_PLAYOUT_AUDIO_LOWLEVEL	sdk/includes/AgoraBase.h	/^    WARN_ADM_PLAYOUT_AUDIO_LOWLEVEL = 1032,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_ADM_PLAYOUT_MALFUNCTION	sdk/includes/AgoraBase.h	/^    WARN_ADM_PLAYOUT_MALFUNCTION = 1020,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_ADM_RECORD_AUDIO_LOWLEVEL	sdk/includes/AgoraBase.h	/^    WARN_ADM_RECORD_AUDIO_LOWLEVEL = 1031,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_ADM_RECORD_AUDIO_SILENCE	sdk/includes/AgoraBase.h	/^    WARN_ADM_RECORD_AUDIO_SILENCE = 1019,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_ADM_RECORD_MALFUNCTION	sdk/includes/AgoraBase.h	/^    WARN_ADM_RECORD_MALFUNCTION = 1021,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_ADM_RUNTIME_PLAYOUT_WARNING	sdk/includes/AgoraBase.h	/^    WARN_ADM_RUNTIME_PLAYOUT_WARNING = 1014,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_ADM_RUNTIME_RECORDING_WARNING	sdk/includes/AgoraBase.h	/^    WARN_ADM_RUNTIME_RECORDING_WARNING = 1016,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_ADM_WINDOWS_NO_DATA_READY_EVENT	sdk/includes/AgoraBase.h	/^    WARN_ADM_WINDOWS_NO_DATA_READY_EVENT = 1040,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_ADM_WIN_CORE_IMPROPER_CAPTURE_RELEASE	sdk/includes/AgoraBase.h	/^    WARN_ADM_WIN_CORE_IMPROPER_CAPTURE_RELEASE = 1324,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_ADM_WIN_CORE_NO_PLAYOUT_DEVICE	sdk/includes/AgoraBase.h	/^    WARN_ADM_WIN_CORE_NO_PLAYOUT_DEVICE = 1323,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_ADM_WIN_CORE_NO_RECORDING_DEVICE	sdk/includes/AgoraBase.h	/^    WARN_ADM_WIN_CORE_NO_RECORDING_DEVICE = 1322,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_APM_HOWLING	sdk/includes/AgoraBase.h	/^    WARN_APM_HOWLING = 1051,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_AUDIO_MIXING_OPEN_ERROR	sdk/includes/AgoraBase.h	/^    WARN_AUDIO_MIXING_OPEN_ERROR = 701,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_CODE_TYPE	sdk/includes/AgoraBase.h	/^enum WARN_CODE_TYPE$/;"	g	namespace:agora
+WARN_INIT_VIDEO	sdk/includes/AgoraBase.h	/^    WARN_INIT_VIDEO = 16,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_INVALID_VIEW	sdk/includes/AgoraBase.h	/^    WARN_INVALID_VIEW = 8,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_LOOKUP_CHANNEL_REJECTED	sdk/includes/AgoraBase.h	/^    WARN_LOOKUP_CHANNEL_REJECTED = 105,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_LOOKUP_CHANNEL_TIMEOUT	sdk/includes/AgoraBase.h	/^    WARN_LOOKUP_CHANNEL_TIMEOUT = 104,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_NO_AVAILABLE_CHANNEL	sdk/includes/AgoraBase.h	/^    WARN_NO_AVAILABLE_CHANNEL = 103,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_OPEN_CHANNEL_INVALID_TICKET	sdk/includes/AgoraBase.h	/^    WARN_OPEN_CHANNEL_INVALID_TICKET = 121,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_OPEN_CHANNEL_REJECTED	sdk/includes/AgoraBase.h	/^    WARN_OPEN_CHANNEL_REJECTED = 107,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_OPEN_CHANNEL_TIMEOUT	sdk/includes/AgoraBase.h	/^    WARN_OPEN_CHANNEL_TIMEOUT = 106,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_OPEN_CHANNEL_TRY_NEXT_VOS	sdk/includes/AgoraBase.h	/^    WARN_OPEN_CHANNEL_TRY_NEXT_VOS = 122,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_PENDING	sdk/includes/AgoraBase.h	/^    WARN_PENDING = 20,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_RTM_KEEP_ALIVE_TIMEOUT	sdk/includes/AgoraBase.h	/^    WARN_RTM_KEEP_ALIVE_TIMEOUT = 2009$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_RTM_LOGIN_TIMEOUT	sdk/includes/AgoraBase.h	/^    WARN_RTM_LOGIN_TIMEOUT = 2005,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_SET_CLIENT_ROLE_TIMEOUT	sdk/includes/AgoraBase.h	/^    WARN_SET_CLIENT_ROLE_TIMEOUT = 118,$/;"	e	enum:agora::WARN_CODE_TYPE
+WARN_SWITCH_LIVE_VIDEO_TIMEOUT	sdk/includes/AgoraBase.h	/^    WARN_SWITCH_LIVE_VIDEO_TIMEOUT = 111,$/;"	e	enum:agora::WARN_CODE_TYPE
+WIN32_LEAN_AND_MEAN	sdk/includes/AgoraBase.h	14;"	d
+addEventHandler	rtm_controller.cc	/^void RtmServerController::addEventHandler(const std::string& eventName, Persistent<Object>& obj, Persistent<Function>& callback)$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+agora	node_async_queue.cpp	/^namespace agora {$/;"	n	file:
+agora	node_async_queue.h	/^namespace agora {$/;"	n
+agora	rtm_controller.cc	/^namespace agora {$/;"	n	file:
+agora	rtm_controller.h	/^namespace agora {$/;"	n
+agora	rtm_server.cpp	/^namespace agora{$/;"	n	file:
+agora	rtm_server.h	/^namespace agora{$/;"	n
+agora	sdk/includes/AgoraBase.h	/^namespace agora {$/;"	n
+agora	sdk/includes/IAgoraRtmService.h	/^namespace agora {$/;"	n
+agora	sdk/includes/IAgoraService.h	/^namespace agora {$/;"	n
+agora_service_	rtm_controller.h	/^  std::unique_ptr<agora::base::IAgoraService> agora_service_;$/;"	m	class:agora::lb_linux_sdk::RtmServerController
+alloc_buf	node_napi_api.h	/^    static char* alloc_buf(size_t length)$/;"	f	class:NodeString
+async_call	node_async_queue.h	/^            int async_call(Elem&& e, uint64_t ts = 0) {$/;"	f	class:agora::lb_linux_sdk::async_queue
+async_call	node_async_queue.h	/^            static void async_call(task_type&& cb) {$/;"	f	class:agora::lb_linux_sdk::node_async_call
+async_callback	node_async_queue.h	/^            static void async_callback(uv_async_t* handle) {$/;"	f	class:agora::lb_linux_sdk::async_queue
+async_queue	node_async_queue.h	/^            async_queue(uv_loop_t *loop, callback_type&& cb)$/;"	f	class:agora::lb_linux_sdk::async_queue
+async_queue	node_async_queue.h	/^        class async_queue$/;"	c	namespace:agora::lb_linux_sdk
+base	sdk/includes/IAgoraService.h	/^namespace base {$/;"	n	namespace:agora
+callback	rtm_controller.h	/^    Persistent<Function> callback;$/;"	m	struct:agora::lb_linux_sdk::RtmServerController::NodeEventCallback
+capacity_	node_async_queue.h	/^            size_t capacity_;$/;"	m	class:agora::lb_linux_sdk::async_queue
+cbPrint	rtm_server.h	/^    void cbPrint(const char* fmt, ...) {$/;"	f	class:agora::lb_linux_sdk::RtmServer
+cb_	node_async_queue.h	/^            callback_type cb_;$/;"	m	class:agora::lb_linux_sdk::async_queue
+clear	node_async_queue.h	/^            void clear() {$/;"	f	class:agora::lb_linux_sdk::async_queue
+close	node_async_queue.h	/^            void close() {$/;"	f	class:agora::lb_linux_sdk::async_queue
+closed	node_async_queue.h	/^            bool closed() const {$/;"	f	class:agora::lb_linux_sdk::async_queue
+closed_	node_async_queue.h	/^            std::atomic<bool> closed_;$/;"	m	class:agora::lb_linux_sdk::async_queue
+constructor	rtm_controller.cc	/^static Nan::Persistent<v8::Function> constructor;$/;"	v	file:
+controller_	rtm_controller.h	/^  std::unique_ptr<agora::rtm::IRtmService> controller_;$/;"	m	class:agora::lb_linux_sdk::RtmServerController
+ctx	rtm_controller.h	/^  agora::base::AgoraServiceContext ctx;$/;"	m	class:agora::lb_linux_sdk::RtmServerController
+empty	node_async_queue.h	/^            bool empty() const {$/;"	f	class:agora::lb_linux_sdk::async_queue
+fail	rtm_controller.h	/^    NodeEventCallback* fail;$/;"	m	struct:agora::lb_linux_sdk::RtmServerController::CommandPrivData
+free_buf	node_napi_api.h	/^    static void free_buf(char* buf)$/;"	f	class:NodeString
+get	sdk/includes/AgoraBase.h	/^    pointer_type get() const {$/;"	f	class:agora::util::AutoPtr
+getNodeValue	node_uid.h	/^            static Local<Value> getNodeValue(Isolate *isolate, uid_t id)$/;"	f	class:NodeUid
+getUidFromNodeValue	node_uid.h	/^            static napi_status getUidFromNodeValue(const Local<Value>& value, uid_t& id)$/;"	f	class:NodeUid
+h_	node_async_queue.h	/^            uv_async_t * h_;$/;"	m	class:agora::lb_linux_sdk::async_queue
+initialize	rtm_server.cpp	/^        void RtmServer::initialize(const std::string& appId){$/;"	f	class:agora::lb_linux_sdk::RtmServer
+instance	node_async_queue.h	/^            static node_async_call& instance() { return s_instance_; }$/;"	f	class:agora::lb_linux_sdk::node_async_call
+js_this	rtm_controller.h	/^    Persistent<Object> js_this;$/;"	m	struct:agora::lb_linux_sdk::RtmServerController::NodeEventCallback
+last_pop_ts	node_async_queue.h	/^            uint64_t last_pop_ts() const {$/;"	f	class:agora::lb_linux_sdk::async_queue
+lb_linux_sdk	node_async_queue.cpp	/^    namespace lb_linux_sdk {$/;"	n	namespace:agora	file:
+lb_linux_sdk	node_async_queue.h	/^    namespace lb_linux_sdk {$/;"	n	namespace:agora
+lb_linux_sdk	rtm_controller.cc	/^namespace lb_linux_sdk {$/;"	n	namespace:agora	file:
+lb_linux_sdk	rtm_controller.h	/^namespace lb_linux_sdk {$/;"	n	namespace:agora
+lb_linux_sdk	rtm_server.cpp	/^    namespace lb_linux_sdk{$/;"	n	namespace:agora	file:
+lb_linux_sdk	rtm_server.h	/^namespace lb_linux_sdk{$/;"	n	namespace:agora
+lock_	node_async_queue.h	/^            mutable Lck lock_;$/;"	m	class:agora::lb_linux_sdk::async_queue
+login	rtm_controller.cc	/^void RtmServerController::login(const Nan::FunctionCallbackInfo<v8::Value> &args) {$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+login	rtm_server.cpp	/^        int RtmServer::login(const std::string& appId, const std::string& userId){$/;"	f	class:agora::lb_linux_sdk::RtmServer
+logout	rtm_controller.cc	/^void RtmServerController::logout(const Nan::FunctionCallbackInfo<v8::Value> &args) {$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+logout	rtm_server.cpp	/^        int RtmServer::logout(){$/;"	f	class:agora::lb_linux_sdk::RtmServer
+m_callbacks	rtm_controller.h	/^  std::unordered_map<std::string, NodeEventCallback*> m_callbacks;$/;"	m	class:agora::lb_linux_sdk::RtmServerController
+m_commands	rtm_controller.h	/^  std::unordered_map<std::string, CommandPrivData*> m_commands;$/;"	m	class:agora::lb_linux_sdk::RtmServerController
+m_id	node_uid.h	/^            uid_t m_id;$/;"	m	class:NodeUid
+m_rtmService	rtm_server.h	/^    std::unique_ptr<agora::rtm::IRtmService> m_rtmService;$/;"	m	class:agora::lb_linux_sdk::RtmServer
+napi_array_expected	node_napi_api.h	/^    napi_array_expected,$/;"	e	enum:__anon1
+napi_boolean_expected	node_napi_api.h	/^    napi_boolean_expected,$/;"	e	enum:__anon1
+napi_cancelled	node_napi_api.h	/^    napi_cancelled,$/;"	e	enum:__anon1
+napi_create_bool_	node_napi_api.cpp	/^Local<Value> napi_create_bool_(Isolate *isolate, const bool &value)$/;"	f
+napi_create_double_	node_napi_api.cpp	/^Local<Value> napi_create_double_(Isolate *isolate, const double &value)$/;"	f
+napi_create_int32_	node_napi_api.cpp	/^Local<Value> napi_create_int32_(Isolate *isolate, const int32_t &value)$/;"	f
+napi_create_string_	node_napi_api.cpp	/^Local<Value> napi_create_string_(Isolate *isolate, const char *value)$/;"	f
+napi_create_uid_	node_napi_api.cpp	/^Local<Value> napi_create_uid_(Isolate *isolate, const uid_t& uid)$/;"	f
+napi_create_uint16_	node_napi_api.cpp	/^Local<Value> napi_create_uint16_(Isolate *isolate, const uint16_t &value)$/;"	f
+napi_create_uint32_	node_napi_api.cpp	/^Local<Value> napi_create_uint32_(Isolate *isolate, const uint32_t &value)$/;"	f
+napi_create_uint64_	node_napi_api.cpp	/^Local<Value> napi_create_uint64_(Isolate *isolate, const uint64_t &value)$/;"	f
+napi_escape_called_twice	node_napi_api.h	/^    napi_escape_called_twice,$/;"	e	enum:__anon1
+napi_function_expected	node_napi_api.h	/^    napi_function_expected,$/;"	e	enum:__anon1
+napi_generic_failure	node_napi_api.h	/^    napi_generic_failure,$/;"	e	enum:__anon1
+napi_get_value_array_object_	node_napi_api.cpp	/^napi_status napi_get_value_array_object_(Isolate *isolate, Local<Object> &object, const char *str_key, Local<Array> &result)$/;"	f
+napi_get_value_bool_	node_napi_api.cpp	/^napi_status napi_get_value_bool_(const Local<Value> &value, bool &result)$/;"	f
+napi_get_value_double_	node_napi_api.cpp	/^napi_status napi_get_value_double_(const Local<Value> &value, double &result)$/;"	f
+napi_get_value_double_object_	node_napi_api.cpp	/^napi_status napi_get_value_double_object_(Isolate *isolate, Local<Object> &object, const char *str_key, double &result)$/;"	f
+napi_get_value_function	node_napi_api.cpp	/^napi_status napi_get_value_function(const Local<Value>& value, Local<Function>& func)$/;"	f
+napi_get_value_int32_	node_napi_api.cpp	/^napi_status napi_get_value_int32_(const Local<Value> &value, int32_t &result)$/;"	f
+napi_get_value_int32_object_	node_napi_api.cpp	/^napi_status napi_get_value_int32_object_(Isolate *isolate, Local<Object> &object, const char *str_key, int32_t &result)$/;"	f
+napi_get_value_int64_	node_napi_api.cpp	/^napi_status napi_get_value_int64_(const Local<Value> &value, int64_t &result)$/;"	f
+napi_get_value_nodestring_	node_napi_api.cpp	/^napi_status napi_get_value_nodestring_(const Local<Value> &str, NodeString &nodechar)$/;"	f
+napi_get_value_string_object_	node_napi_api.cpp	/^napi_status napi_get_value_string_object_(Isolate *isolate, Local<Object> &object, const char *str_key, NodeString &result)$/;"	f
+napi_get_value_string_utf8_	node_napi_api.cpp	/^int napi_get_value_string_utf8_(const Local<Value> &str, char *buffer, uint32_t len)$/;"	f
+napi_get_value_uint32_	node_napi_api.cpp	/^napi_status napi_get_value_uint32_(const Local<Value> &value, uint32_t &result)$/;"	f
+napi_get_value_uint32_object_	node_napi_api.cpp	/^napi_status napi_get_value_uint32_object_(Isolate *isolate, Local<Object> &object, const char *str_key, uint32_t &result)$/;"	f
+napi_handle_scope_mismatch	node_napi_api.h	/^    napi_handle_scope_mismatch$/;"	e	enum:__anon1
+napi_invalid_arg	node_napi_api.h	/^    napi_invalid_arg,$/;"	e	enum:__anon1
+napi_name_expected	node_napi_api.h	/^    napi_name_expected,$/;"	e	enum:__anon1
+napi_number_expected	node_napi_api.h	/^    napi_number_expected,$/;"	e	enum:__anon1
+napi_object_expected	node_napi_api.h	/^    napi_object_expected,$/;"	e	enum:__anon1
+napi_ok	node_napi_api.h	/^    napi_ok,$/;"	e	enum:__anon1
+napi_pending_exception	node_napi_api.h	/^    napi_pending_exception,$/;"	e	enum:__anon1
+napi_set_bool_result	rtm_controller.h	99;"	d
+napi_set_int_result	rtm_controller.h	94;"	d
+napi_set_string_result	rtm_controller.h	104;"	d
+napi_status	node_napi_api.h	/^} napi_status;$/;"	t	typeref:enum:__anon1
+napi_string_expected	node_napi_api.h	/^    napi_string_expected,$/;"	e	enum:__anon1
+node_async_call	node_async_queue.cpp	/^        node_async_call::node_async_call()$/;"	f	class:agora::lb_linux_sdk::node_async_call
+node_async_call	node_async_queue.h	/^        class node_async_call$/;"	c	namespace:agora::lb_linux_sdk
+node_queue_	node_async_queue.h	/^            std::unique_ptr<node_queue_type> node_queue_;$/;"	m	class:agora::lb_linux_sdk::node_async_call
+onAttributesDeleted	sdk/includes/IAgoraRtmService.h	/^            virtual void onAttributesDeleted(const IChannelAttributes *attributes)$/;"	f	class:agora::rtm::IChannelEventHandler
+onAttributesUpdated	sdk/includes/IAgoraRtmService.h	/^            virtual void onAttributesUpdated(const IChannelAttributes *attributes)$/;"	f	class:agora::rtm::IChannelEventHandler
+onConnectionStateChanged	rtm_controller.cc	/^void RtmServerController::onConnectionStateChanged(agora::rtm::CONNECTION_STATE state) {$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+onConnectionStateChanged	rtm_server.cpp	/^        void RtmServer::onConnectionStateChanged(agora::rtm::CONNECTION_STATE state){$/;"	f	class:agora::lb_linux_sdk::RtmServer
+onConnectionStateChanged	sdk/includes/IAgoraRtmService.h	/^            virtual void onConnectionStateChanged(CONNECTION_STATE state)$/;"	f	class:agora::rtm::IRtmServiceEventHandler
+onDeleteAttributesResponse	sdk/includes/IAgoraRtmService.h	/^            virtual void onDeleteAttributesResponse(long long requestId, RESPONSE_CODE resCode)$/;"	f	class:agora::rtm::IChannelEventHandler
+onEvent	rtm_controller.cc	/^void RtmServerController::onEvent(const Nan::FunctionCallbackInfo<v8::Value> &args) {$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+onJoinFailure	sdk/includes/IAgoraRtmService.h	/^            virtual void onJoinFailure(JOIN_CHANNEL_ERROR errorCode)$/;"	f	class:agora::rtm::IChannelEventHandler
+onJoinSuccess	sdk/includes/IAgoraRtmService.h	/^            virtual void onJoinSuccess()$/;"	f	class:agora::rtm::IChannelEventHandler
+onLeave	sdk/includes/IAgoraRtmService.h	/^            virtual void onLeave(LEAVE_CHANNEL_REASON reason)$/;"	f	class:agora::rtm::IChannelEventHandler
+onLoginFailure	rtm_controller.cc	/^void RtmServerController::onLoginFailure(agora::rtm::LOGIN_ERR_CODE errorCode) {$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+onLoginFailure	rtm_server.cpp	/^        void RtmServer::onLoginFailure(agora::rtm::LOGIN_ERR_CODE errorCode) {$/;"	f	class:agora::lb_linux_sdk::RtmServer
+onLoginFailure	sdk/includes/IAgoraRtmService.h	/^            virtual void onLoginFailure(LOGIN_ERR_CODE errorCode)$/;"	f	class:agora::rtm::IRtmServiceEventHandler
+onLoginSuccess	rtm_controller.cc	/^void RtmServerController::onLoginSuccess() {$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+onLoginSuccess	rtm_server.cpp	/^        void RtmServer::onLoginSuccess() {$/;"	f	class:agora::lb_linux_sdk::RtmServer
+onLoginSuccess	sdk/includes/IAgoraRtmService.h	/^            virtual void onLoginSuccess() {}$/;"	f	class:agora::rtm::IRtmServiceEventHandler
+onLogout	rtm_controller.cc	/^void RtmServerController::onLogout() {$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+onLogout	rtm_server.cpp	/^        void RtmServer::onLogout() {$/;"	f	class:agora::lb_linux_sdk::RtmServer
+onLogout	sdk/includes/IAgoraRtmService.h	/^            virtual void onLogout() {}$/;"	f	class:agora::rtm::IRtmServiceEventHandler
+onMemberJoined	sdk/includes/IAgoraRtmService.h	/^            virtual void onMemberJoined(IChannelMember *member)$/;"	f	class:agora::rtm::IChannelEventHandler
+onMemberLeft	sdk/includes/IAgoraRtmService.h	/^            virtual void onMemberLeft(IChannelMember *member)$/;"	f	class:agora::rtm::IChannelEventHandler
+onMembersGotten	sdk/includes/IAgoraRtmService.h	/^            virtual void onMembersGotten(IChannelMember **members, int userCount)$/;"	f	class:agora::rtm::IChannelEventHandler
+onMessageReceived	sdk/includes/IAgoraRtmService.h	/^            virtual void onMessageReceived(const IMessage *message)$/;"	f	class:agora::rtm::IChannelEventHandler
+onMessageReceivedFromPeer	rtm_controller.cc	/^void RtmServerController::onMessageReceivedFromPeer(const char *peerId, const agora::rtm::IMessage *message) {$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+onMessageReceivedFromPeer	rtm_server.cpp	/^        void RtmServer::onMessageReceivedFromPeer(const char *peerId, const agora::rtm::IMessage *message){$/;"	f	class:agora::lb_linux_sdk::RtmServer
+onMessageReceivedFromPeer	sdk/includes/IAgoraRtmService.h	/^            virtual void onMessageReceivedFromPeer(const char *peerId, const IMessage *message)$/;"	f	class:agora::rtm::IRtmServiceEventHandler
+onSendMessageState	rtm_controller.cc	/^void RtmServerController::onSendMessageState(long long messageId, agora::rtm::PEER_MESSAGE_STATE state) {$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+onSendMessageState	rtm_server.cpp	/^        void RtmServer::onSendMessageState(long long messageId, agora::rtm::PEER_MESSAGE_STATE state){$/;"	f	class:agora::lb_linux_sdk::RtmServer
+onSendMessageState	sdk/includes/IAgoraRtmService.h	/^            virtual void onSendMessageState(long long messageId, CHANNEL_MESSAGE_STATE state)$/;"	f	class:agora::rtm::IChannelEventHandler
+onSendMessageState	sdk/includes/IAgoraRtmService.h	/^            virtual void onSendMessageState(long long messageId, PEER_MESSAGE_STATE state)$/;"	f	class:agora::rtm::IRtmServiceEventHandler
+onUpdateAttributesResponse	sdk/includes/IAgoraRtmService.h	/^            virtual void onUpdateAttributesResponse(long long requestId, RESPONSE_CODE resCode)$/;"	f	class:agora::rtm::IChannelEventHandler
+on_event	node_async_queue.h	/^            void on_event() {$/;"	f	class:agora::lb_linux_sdk::async_queue
+operator *	sdk/includes/AgoraBase.h	/^    value_type& operator*() const {$/;"	f	class:agora::util::AutoPtr
+operator ->	sdk/includes/AgoraBase.h	/^    pointer_type operator->() const {$/;"	f	class:agora::util::AutoPtr
+operator bool	sdk/includes/AgoraBase.h	/^    operator bool() const { return ptr_ != (pointer_type)0; }$/;"	f	class:agora::util::AutoPtr
+operator char*	node_napi_api.h	/^    operator char* () {$/;"	f	class:NodeString
+operator uid_t	node_uid.h	/^            operator uid_t()$/;"	f	class:NodeUid
+p_mem	node_napi_api.h	/^    char *p_mem;$/;"	m	class:NodeString
+pointer_type	sdk/includes/AgoraBase.h	/^    typedef T* pointer_type;$/;"	t	class:agora::util::AutoPtr
+ptr_	sdk/includes/AgoraBase.h	/^    pointer_type ptr_;$/;"	m	class:agora::util::AutoPtr
+q_	node_async_queue.h	/^            std::queue<Elem> q_;$/;"	m	class:agora::lb_linux_sdk::async_queue
+queryInterface	sdk/includes/AgoraBase.h	/^    bool queryInterface(C1* c, C2 iid) {$/;"	f	class:agora::util::AutoPtr
+release	sdk/includes/AgoraBase.h	/^    pointer_type release() {$/;"	f	class:agora::util::AutoPtr
+reset	sdk/includes/AgoraBase.h	/^    void reset(pointer_type ptr = 0) {$/;"	f	class:agora::util::AutoPtr
+rtc	sdk/includes/IAgoraService.h	/^    namespace rtc {$/;"	n	namespace:agora
+rtm	sdk/includes/IAgoraRtmService.h	/^    namespace rtm {$/;"	n	namespace:agora
+rtm	sdk/includes/IAgoraService.h	/^    namespace rtm {$/;"	n	namespace:agora
+run_task	node_async_queue.h	/^            void run_task(task_type& task) {$/;"	f	class:agora::lb_linux_sdk::node_async_call
+s_instance_	node_async_queue.cpp	/^        node_async_call node_async_call::s_instance_;$/;"	m	class:agora::lb_linux_sdk::node_async_call	file:
+s_instance_	node_async_queue.h	/^            static node_async_call s_instance_;$/;"	m	class:agora::lb_linux_sdk::node_async_call
+sendMessageToPeer	rtm_controller.cc	/^void RtmServerController::sendMessageToPeer(const Nan::FunctionCallbackInfo<v8::Value> &args)$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+sendMessageToPeer	rtm_server.cpp	/^        int RtmServer::sendMessageToPeer(const std::string& peerId, const std::string& message) {$/;"	f	class:agora::lb_linux_sdk::RtmServer
+setBuf	node_napi_api.h	/^    void setBuf(char* buf)$/;"	f	class:NodeString
+set_capacity	node_async_queue.h	/^            void set_capacity(size_t capacity) {$/;"	f	class:agora::lb_linux_sdk::async_queue
+set_priority	node_async_queue.h	/^            void set_priority(int prio) {}$/;"	f	class:agora::lb_linux_sdk::async_queue
+size	node_async_queue.h	/^            size_t size() const {$/;"	f	class:agora::lb_linux_sdk::async_queue
+success	rtm_controller.h	/^    NodeEventCallback* success;$/;"	m	struct:agora::lb_linux_sdk::RtmServerController::CommandPrivData
+util	sdk/includes/AgoraBase.h	/^namespace util {$/;"	n	namespace:agora
+uuid	rtm_controller.h	/^    std::string uuid;$/;"	m	struct:agora::lb_linux_sdk::RtmServerController::CommandPrivData
+value_type	sdk/includes/AgoraBase.h	/^    typedef T value_type;$/;"	t	class:agora::util::AutoPtr
+~AutoPtr	sdk/includes/AgoraBase.h	/^    ~AutoPtr() {$/;"	f	class:agora::util::AutoPtr
+~CommandPrivData	rtm_controller.h	/^    ~CommandPrivData(){$/;"	f	struct:agora::lb_linux_sdk::RtmServerController::CommandPrivData
+~IRtmServiceEventHandler	sdk/includes/IAgoraRtmService.h	/^            virtual ~IRtmServiceEventHandler() {}$/;"	f	class:agora::rtm::IRtmServiceEventHandler
+~NodeString	node_napi_api.h	/^    ~NodeString()$/;"	f	class:NodeString
+~NodeUid	node_uid.h	/^            ~NodeUid()$/;"	f	class:NodeUid
+~RtmServer	rtm_server.cpp	/^        RtmServer::~RtmServer() { }$/;"	f	class:agora::lb_linux_sdk::RtmServer
+~RtmServerController	rtm_controller.cc	/^RtmServerController::~RtmServerController() {$/;"	f	class:agora::lb_linux_sdk::RtmServerController
+~async_queue	node_async_queue.h	/^            ~async_queue() {$/;"	f	class:agora::lb_linux_sdk::async_queue
+~node_async_call	node_async_queue.cpp	/^        node_async_call::~node_async_call()$/;"	f	class:agora::lb_linux_sdk::node_async_call
