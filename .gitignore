@@ -7,4 +7,5 @@ dist/
 include/
 lib/
 pkg/
+libagora_rtm_sdk.so
 .env.local

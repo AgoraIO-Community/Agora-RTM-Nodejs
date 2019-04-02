@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 # where available (npm@5+)
 COPY package*.json ./
 
-COPY lib/libagora_rtm_sdk.so /usr/lib/
+COPY libagora_rtm_sdk.so /usr/lib/
 
 RUN npm install --ignore-scripts
 # If you are building your code for production

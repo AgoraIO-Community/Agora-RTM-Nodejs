@@ -13,7 +13,7 @@
       "addon/rtm_channel_event_handler.cc"
     ],
     "include_dirs": ["<!(node -e \"require('nan')\")", "include/"],
-    "libraries": ["-Wl,-rpath,lib/libagora_rtm_sdk.so", "-lagora_rtm_sdk", "-lpthread"],
+    "libraries": ["-Wl,-rpath,libagora_rtm_sdk.so", "-lagora_rtm_sdk", "-lpthread"],
     "cflags": ["-std=c++11"]
   }]
 }
