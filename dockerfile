@@ -13,13 +13,15 @@ COPY package*.json ./
 
 COPY lib/libagora_rtm_sdk.so /usr/lib/
 
-RUN npm install
+RUN npm install --ignore-scripts
 # If you are building your code for production
 # RUN npm ci --only=production
 # Bundle app source
 COPY . .
 
 RUN npm run build:addon
+
+RUN npm run build:ts
 
 RUN npm run test
 

@@ -11,7 +11,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest --forceExit",
+    "test": "jest --setupFiles dotenv/config --forceExit",
+    "postinstall": "build:ts",
     "build:addon": "node-gyp rebuild",
     "build:debug": "node-gyp rebuild --debug && mv build/Debug build/Release",
     "build:ts": "tsc"
@@ -71,6 +72,7 @@
     "@pika/plugin-standard-pkg": "0.3.14",
     "@types/jest": "24.0.11",
     "@types/node": "^11.11.3",
+    "dotenv": "^7.0.0",
     "jest": "24.4.0",
     "nan": "^2.13.0",
     "typescript": "3.3.3333"
