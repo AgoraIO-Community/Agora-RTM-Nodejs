@@ -21,6 +21,7 @@ export interface RTMChannel {
     eventName: E,
     callback: RTMChannelEvent[E]
   ): void;
+  release(): void;
 }
 
 export interface RTMControllerEvent {

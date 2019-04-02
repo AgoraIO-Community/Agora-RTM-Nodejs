@@ -386,6 +386,7 @@ Local<Object> RtmChannel::generateJSInstance(agora::rtm::IRtmService *rtm, agora
   Nan::SetPrototypeMethod(tpl, "onEvent", onEvent);
   Nan::SetPrototypeMethod(tpl, "getMembers", getMembers);
   Nan::SetPrototypeMethod(tpl, "leave", leave);
+  Nan::SetPrototypeMethod(tpl, "release", release);
 
   Local<Function> cons = tpl->GetFunction();
   Local<External> exrtm = Local<External>::New(Isolate::GetCurrent(), External::New(Isolate::GetCurrent(), rtm));
@@ -435,6 +436,18 @@ void RtmChannel::leave(const Nan::FunctionCallbackInfo<v8::Value> &args)
     RtmChannel *instance = ObjectWrap::Unwrap<RtmChannel>(args.Holder());
     bool result = instance->channel_->leave();
     napi_set_int_result(args, result);
+  } while (false);
+}
+
+void RtmChannel::release(const Nan::FunctionCallbackInfo<v8::Value> &args)
+{
+  do
+  {
+    Isolate *isolate = Isolate::GetCurrent();
+    HandleScope scope(isolate);
+    RtmChannel *instance = ObjectWrap::Unwrap<RtmChannel>(args.Holder());
+    instance->channel_->release();
+    napi_set_int_result(args, true);
   } while (false);
 }
 
