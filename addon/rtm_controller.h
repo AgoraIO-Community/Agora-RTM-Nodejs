@@ -43,6 +43,7 @@ class RtmChannel :  public Nan::ObjectWrap
     static void sendMessage(const Nan::FunctionCallbackInfo<v8::Value> &args);
     static void onEvent(const Nan::FunctionCallbackInfo<v8::Value> &args);
     static void getMembers(const Nan::FunctionCallbackInfo<v8::Value> &args);
+    static void release(const Nan::FunctionCallbackInfo<v8::Value> &args);
 
   public:
     agora::rtm::IChannel* channel_;

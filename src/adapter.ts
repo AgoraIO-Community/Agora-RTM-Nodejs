@@ -65,6 +65,10 @@ export class AgoraRtmChannel extends EventEmitter {
     });
   }
 
+  public release() {
+    return this.channel.release();
+  }
+
   public sendMessage(message: string) {
     return this.channel.sendMessage(message);
   }
