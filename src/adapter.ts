@@ -124,12 +124,16 @@ class AgoraRtmSDK extends EventEmitter {
     })
   }
 
-  public login(appid: string, account: string) {
+  public initialize(appid: string) {
+    return this.sdk.initialize(appid);
+  }
+
+  public login(token: string, account: string) {
     return new Promise(async (resolve, reject) => {
       try {
         await this.mutex.wait("login");
         this.mutex.lock("login");
-        this.sdk.login(appid, account)
+        this.sdk.login(token, account)
         // if (!this.sdk.login(appid, account)) {
         //   this.mutex.unlock("login");
         //   reject(new Error(`Execute 'login' and return false`));

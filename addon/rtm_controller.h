@@ -80,6 +80,7 @@ class RtmServerController : public Nan::ObjectWrap,
   void addEventHandler(const std::string& eventName, Persistent<Object>& obj, Persistent<Function>& callback);
   static void Init(v8::Local<v8::Object> exports);
   static void New(const Nan::FunctionCallbackInfo<v8::Value> &info);
+  static void initialize(const Nan::FunctionCallbackInfo<v8::Value> &args);
   static void login(
       const Nan::FunctionCallbackInfo<v8::Value> &args);
   static void logout(

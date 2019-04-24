@@ -158,6 +158,7 @@ void RtmServerController::Init(Local<Object> exports)
   tpl->SetClassName(Nan::New("RtmServerController").ToLocalChecked());
   tpl->InstanceTemplate()->SetInternalFieldCount(1);
 
+  Nan::SetPrototypeMethod(tpl, "initialize", initialize);
   Nan::SetPrototypeMethod(tpl, "login", login);
   Nan::SetPrototypeMethod(tpl, "logout", logout);
   Nan::SetPrototypeMethod(tpl, "sendMessageToPeer", sendMessageToPeer);
@@ -175,23 +176,39 @@ void RtmServerController::New(const Nan::FunctionCallbackInfo<Value> &args)
   args.GetReturnValue().Set(args.This());
 }
 
-void RtmServerController::login(const Nan::FunctionCallbackInfo<v8::Value> &args)
+void RtmServerController::initialize(const Nan::FunctionCallbackInfo<v8::Value> &args)
 {
-  NodeString app_id, user_id;
+  NodeString app_id, user_id, token;
   uint32_t cid;
   Local<Function> success, fail;
   napi_get_value_nodestring_(args[0], app_id);
+
+  Isolate *isolate = Isolate::GetCurrent();
+  HandleScope scope(isolate);
+  RtmServerController *instance = ObjectWrap::Unwrap<RtmServerController>(args.Holder());
+  int result = instance->controller_->initialize(app_id, instance);
+  napi_set_int_result(args, result);
+}
+
+void RtmServerController::login(const Nan::FunctionCallbackInfo<v8::Value> &args)
+{
+  NodeString user_id, token;
+  uint32_t cid;
+  Local<Function> success, fail;
   napi_get_value_nodestring_(args[1], user_id);
 
   Isolate *isolate = Isolate::GetCurrent();
   HandleScope scope(isolate);
   RtmServerController *instance = ObjectWrap::Unwrap<RtmServerController>(args.Holder());
-  if (instance->controller_ == nullptr)
-  {
-    std::cout << "wrong create rtm server failed" << std::endl;
+
+  bool result = true;
+  if(args[0]->IsNull()) {
+    result = instance->controller_->login(NULL, user_id);
+  } else {
+    napi_get_value_nodestring_(args[0], token);
+    result = instance->controller_->login(token, user_id);
   }
-  instance->controller_->initialize(app_id, instance);
-  bool result = instance->controller_->login(app_id, user_id);
+
   napi_set_int_result(args, result);
 }
 
