@@ -101,7 +101,7 @@ class RtmServerController : public Nan::ObjectWrap,
   virtual void onLoginFailure(agora::rtm::LOGIN_ERR_CODE errorCode);
   virtual void onLogout();
   virtual void onConnectionStateChanged(agora::rtm::CONNECTION_STATE state);
-  virtual void onSendMessageState(long long messageId, agora::rtm::PEER_MESSAGE_ERR_CODE state);
+  virtual void onSendMessageResult(long long messageId, agora::rtm::PEER_MESSAGE_ERR_CODE state);
   virtual void onMessageReceivedFromPeer(const char *peerId, const agora::rtm::IMessage *message);
  public:
   std::unordered_map<std::string, RtmChannel*> m_channels;

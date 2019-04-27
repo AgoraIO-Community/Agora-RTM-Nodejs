@@ -354,7 +354,7 @@ void RtmServerController::onConnectionStateChanged(agora::rtm::CONNECTION_STATE 
   });
 }
 
-void RtmServerController::onSendMessageState(long long messageId, agora::rtm::PEER_MESSAGE_ERR_CODE state)
+void RtmServerController::onSendMessageResult(long long messageId, agora::rtm::PEER_MESSAGE_ERR_CODE state)
 {
   agora::lb_linux_sdk::node_async_call::async_call([this, messageId, state]() {
     MAKE_JS_CALL_2(RTM_SEND_MESSAGE_STATE, int32, messageId, int32, state);
