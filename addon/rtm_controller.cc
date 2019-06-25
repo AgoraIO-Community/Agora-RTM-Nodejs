@@ -164,6 +164,7 @@ void RtmServerController::Init(Local<Object> exports)
   Nan::SetPrototypeMethod(tpl, "sendMessageToPeer", sendMessageToPeer);
   Nan::SetPrototypeMethod(tpl, "createChannel", createChannel);
   Nan::SetPrototypeMethod(tpl, "onEvent", onEvent);
+  Nan::SetPrototypeMethod(tpl, "setParameters", setParameters);
 
   constructor.Reset(tpl->GetFunction());
   exports->Set(Nan::New("RtmServerController").ToLocalChecked(), tpl->GetFunction());
@@ -238,6 +239,20 @@ void RtmServerController::sendMessageToPeer(const Nan::FunctionCallbackInfo<v8::
     rtm_message->setText(message);
     bool result = instance->controller_->sendMessageToPeer(peer_id, rtm_message);
     napi_set_bool_result(args, result);
+  } while (false);
+}
+
+void RtmServerController::setParameters(const Nan::FunctionCallbackInfo<v8::Value> &args)
+{
+  do
+  {
+    NodeString params;
+    napi_get_value_nodestring_(args[0], params);
+    Isolate *isolate = Isolate::GetCurrent();
+    HandleScope scope(isolate);
+    RtmServerController *instance = ObjectWrap::Unwrap<RtmServerController>(args.Holder());
+    int result = instance->controller_->setParameters(params);
+    napi_set_int_result(args, result);
   } while (false);
 }
 

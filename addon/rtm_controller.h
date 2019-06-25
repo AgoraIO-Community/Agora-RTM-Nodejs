@@ -91,6 +91,7 @@ class RtmServerController : public Nan::ObjectWrap,
       const Nan::FunctionCallbackInfo<v8::Value> &args);
   static void createChannel(
       const Nan::FunctionCallbackInfo<v8::Value> &args);
+  static void setParameters(const Nan::FunctionCallbackInfo<v8::Value> &args);
 
  private:
   RtmServerController();

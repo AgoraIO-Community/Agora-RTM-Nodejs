@@ -7,6 +7,7 @@ export interface RTMController {
   logout(): boolean;
   sendMessageToPeer(peerId: string, message: string): boolean;
   createChannel(channelName: string): RTMChannel;
+  setParameters(parameter: string): number;
   onEvent<E extends keyof RTMControllerEvent>(
     eventName: E,
     callback: RTMControllerEvent[E]

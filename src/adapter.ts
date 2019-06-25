@@ -182,6 +182,10 @@ class AgoraRtmSDK extends EventEmitter {
     return new AgoraRtmChannel(this.sdk.createChannel(cname));
   }
 
+  public setParameters(param: string) {
+    return this.sdk.setParameters(param);
+  }
+
   private subscribeEvents = () => {
     this.sdk.onEvent("LoginSuccess", () => {
       this.fire("LoginSuccess");
