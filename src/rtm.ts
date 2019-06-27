@@ -3,7 +3,7 @@ const RTMServerController = require("../build/Release/agorasdk")
 
 export interface RTMController {
   initialize(appId: string): number;
-  login(token: string, uid: string): boolean;
+  login(token: string | null, uid: string): boolean;
   logout(): boolean;
   sendMessageToPeer(peerId: string, message: string): boolean;
   createChannel(channelName: string): RTMChannel;
