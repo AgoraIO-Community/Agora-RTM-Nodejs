@@ -6,11 +6,12 @@ let channel: RTMChannel
 describe('C++ Addon API Test', () => {
   it('Login', (done) => {
     client = createInstance();
+    client.initialize(process.env.AGORA_APP_ID)
     client.onEvent('LoginSuccess', () => {
       expect(true);
       done();
     })
-    client.login(process.env.AGORA_APP_ID, 'ttyy')
+    client.login(null, 'ttyy')
   })
   it('Join Channel', (done) => {
     channel = client.createChannel('agoratest')
