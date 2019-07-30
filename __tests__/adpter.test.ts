@@ -11,6 +11,15 @@ describe('Adapter API Test', () => {
     expect(true)
   })
 
+  it('Invalid channel', async() => {
+    const cb = jest.fn()
+    const engine1 = new AgoraRTM();
+    engine1.initialize(process.env.AGORA_APP_ID)
+    await engine1.login(null, 'ttyy1')
+    const channel1 = engine1.createChannel('非法频道');
+    expect(channel1).toBe(null);
+  })
+
   it('MemberJoined', async () => {
     const cb = jest.fn()
     const engine1 = new AgoraRTM();

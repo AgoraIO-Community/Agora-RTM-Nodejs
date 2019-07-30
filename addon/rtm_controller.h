@@ -131,5 +131,11 @@ class RtmServerController : public Nan::ObjectWrap,
       Local<Value> tmp = String::NewFromUtf8(args.GetIsolate(), data, NewStringType::kInternalized).ToLocalChecked();\
       args.GetReturnValue().Set(tmp);
 
+
+  //Helper MACRO to check whether the extracted native this is valid.
+  #define CHECK_NATIVE_THIS(object) \
+  if(!object) { \
+      break;\
+  }
 }  //lb_linux_sdk
 }  //agora

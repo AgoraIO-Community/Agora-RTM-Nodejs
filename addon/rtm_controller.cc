@@ -277,6 +277,10 @@ void RtmServerController::createChannel(const Nan::FunctionCallbackInfo<v8::Valu
     RtmServerController *instance = ObjectWrap::Unwrap<RtmServerController>(args.Holder());
     RtmChannelEventHandler *handler = new RtmChannelEventHandler();
     agora::rtm::IChannel *channel = instance->controller_->createChannel(cname, handler);
+    if(channel == nullptr) {
+      args.GetReturnValue().Set(Nan::Null());
+      break;
+    }
     Local<Object> js = RtmChannel::generateJSInstance(instance->controller_, channel, handler);
     args.GetReturnValue().Set(js);
   } while (false);
@@ -449,54 +453,64 @@ void RtmChannel::New(const Nan::FunctionCallbackInfo<Value> &args)
 
 void RtmChannel::join(const Nan::FunctionCallbackInfo<v8::Value> &args)
 {
+  int result = -1;
   do
   {
     Isolate *isolate = Isolate::GetCurrent();
     HandleScope scope(isolate);
     RtmChannel *instance = ObjectWrap::Unwrap<RtmChannel>(args.Holder());
-    bool result = instance->channel_->join();
-    napi_set_int_result(args, result);
+    CHECK_NATIVE_THIS(instance);
+    result = instance->channel_->join();
   } while (false);
+  napi_set_int_result(args, result);
 }
 
 void RtmChannel::leave(const Nan::FunctionCallbackInfo<v8::Value> &args)
 {
+  int result = -1;
   do
   {
     Isolate *isolate = Isolate::GetCurrent();
     HandleScope scope(isolate);
     RtmChannel *instance = ObjectWrap::Unwrap<RtmChannel>(args.Holder());
-    bool result = instance->channel_->leave();
-    napi_set_int_result(args, result);
+    CHECK_NATIVE_THIS(instance);
+    result = instance->channel_->leave();
   } while (false);
+  napi_set_int_result(args, result);
 }
 
 void RtmChannel::release(const Nan::FunctionCallbackInfo<v8::Value> &args)
 {
+  int result = -1;
   do
   {
     Isolate *isolate = Isolate::GetCurrent();
     HandleScope scope(isolate);
     RtmChannel *instance = ObjectWrap::Unwrap<RtmChannel>(args.Holder());
+    CHECK_NATIVE_THIS(instance);
     instance->channel_->release();
-    napi_set_int_result(args, true);
+    result = 0;
   } while (false);
+  napi_set_int_result(args, result);
 }
 
 void RtmChannel::getMembers(const Nan::FunctionCallbackInfo<v8::Value> &args)
 {
+  int result = -1;
   do
   {
     Isolate *isolate = Isolate::GetCurrent();
     HandleScope scope(isolate);
     RtmChannel *instance = ObjectWrap::Unwrap<RtmChannel>(args.Holder());
-    bool result = instance->channel_->getMembers();
-    napi_set_int_result(args, result);
+    CHECK_NATIVE_THIS(instance);
+    result = instance->channel_->getMembers();
   } while (false);
+  napi_set_int_result(args, result);
 }
 
 void RtmChannel::sendMessage(const Nan::FunctionCallbackInfo<v8::Value> &args)
 {
+  int result = -1;
   do
   {
     NodeString message;
@@ -505,11 +519,13 @@ void RtmChannel::sendMessage(const Nan::FunctionCallbackInfo<v8::Value> &args)
     Isolate *isolate = Isolate::GetCurrent();
     HandleScope scope(isolate);
     RtmChannel *instance = ObjectWrap::Unwrap<RtmChannel>(args.Holder());
+    CHECK_NATIVE_THIS(instance);
     agora::rtm::IMessage *rtm_message = instance->rtm_->createMessage();
+    CHECK_NATIVE_THIS(rtm_message);
     rtm_message->setText(message);
-    bool result = instance->channel_->sendMessage(rtm_message);
-    napi_set_int_result(args, result);
+    result = instance->channel_->sendMessage(rtm_message);
   } while (false);
+  napi_set_int_result(args, result);
 }
 
 void RtmChannel::onEvent(const Nan::FunctionCallbackInfo<v8::Value> &args)

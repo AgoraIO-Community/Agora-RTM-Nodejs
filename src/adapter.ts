@@ -179,7 +179,11 @@ class AgoraRtmSDK extends EventEmitter {
   }
 
   public createChannel(cname: string) {
-    return new AgoraRtmChannel(this.sdk.createChannel(cname));
+    let channel = this.sdk.createChannel(cname)
+    if(channel === null) {
+      return null
+    }
+    return new AgoraRtmChannel(channel);
   }
 
   public setParameters(param: string) {
