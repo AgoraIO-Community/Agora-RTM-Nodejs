@@ -113,7 +113,7 @@ namespace agora {
             });
         }
 
-        void RtmChannelEventHandler::onSendMessageState(long long messageId, agora::rtm::CHANNEL_MESSAGE_ERR_CODE state)
+        void RtmChannelEventHandler::onSendMessageResult(long long messageId, agora::rtm::CHANNEL_MESSAGE_ERR_CODE state)
         {
             agora::lb_linux_sdk::node_async_call::async_call([this, messageId, state]() {
                 MAKE_JS_CALL_2(RTM_CHANNEL_SEND_MESSAGE_STATE, uint64, messageId, int32, state);

@@ -35,14 +35,14 @@ namespace agora {
             RtmChannelEventHandler();
             ~RtmChannelEventHandler();
             void addEventHandler(const std::string& eventName, Persistent<Object>& obj, Persistent<Function>& callback);
-            virtual void onJoinSuccess();
-            virtual void onJoinFailure(agora::rtm::JOIN_CHANNEL_ERR errorCode);
-            virtual void onSendMessageState(long long messageId, agora::rtm::CHANNEL_MESSAGE_ERR_CODE state);
-            virtual void onMessageReceived(const char *userId, const agora::rtm::IMessage *message);
-            virtual void onMemberJoined(agora::rtm::IChannelMember *member);
-            virtual void onMemberLeft(agora::rtm::IChannelMember *member);
-            virtual void onGetMembers(agora::rtm::IChannelMember **members, int userCount, agora::rtm::GET_MEMBERS_ERR errorCode);
-            virtual void onLeave(agora::rtm::LEAVE_CHANNEL_ERR errorCode);
+            virtual void onJoinSuccess() override;
+            virtual void onJoinFailure(agora::rtm::JOIN_CHANNEL_ERR errorCode) override;
+            virtual void onSendMessageResult(long long messageId, agora::rtm::CHANNEL_MESSAGE_ERR_CODE state) override;
+            virtual void onMessageReceived(const char *userId, const agora::rtm::IMessage *message) override;
+            virtual void onMemberJoined(agora::rtm::IChannelMember *member) override;
+            virtual void onMemberLeft(agora::rtm::IChannelMember *member) override;
+            virtual void onGetMembers(agora::rtm::IChannelMember **members, int userCount, agora::rtm::GET_MEMBERS_ERR errorCode) override;
+            virtual void onLeave(agora::rtm::LEAVE_CHANNEL_ERR errorCode) override;
         public:
             RtmChannel* m_channel;
         private:

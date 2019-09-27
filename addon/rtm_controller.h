@@ -102,14 +102,14 @@ class RtmServerController : public Nan::ObjectWrap,
   virtual ~RtmServerController();
 
  public:
-  virtual void onLoginSuccess();
-  virtual void onLoginFailure(agora::rtm::LOGIN_ERR_CODE errorCode);
-  virtual void onLogout(agora::rtm::LOGOUT_ERR_CODE errorCode);
-  virtual void onConnectionStateChanged(agora::rtm::CONNECTION_STATE state, agora::rtm::CONNECTION_CHANGE_REASON reason);
-  virtual void onRenewTokenResult(const char* token, agora::rtm::RENEW_TOKEN_ERR_CODE errorCode);
-  virtual void onTokenExpired();
-  virtual void onSendMessageResult(long long messageId, agora::rtm::PEER_MESSAGE_ERR_CODE state);
-  virtual void onMessageReceivedFromPeer(const char *peerId, const agora::rtm::IMessage *message);
+  virtual void onLoginSuccess() override;
+  virtual void onLoginFailure(agora::rtm::LOGIN_ERR_CODE errorCode) override;
+  virtual void onLogout(agora::rtm::LOGOUT_ERR_CODE errorCode) override;
+  virtual void onConnectionStateChanged(agora::rtm::CONNECTION_STATE state, agora::rtm::CONNECTION_CHANGE_REASON reason) override;
+  virtual void onRenewTokenResult(const char* token, agora::rtm::RENEW_TOKEN_ERR_CODE errorCode) override;
+  virtual void onTokenExpired() override;
+  virtual void onSendMessageResult(long long messageId, agora::rtm::PEER_MESSAGE_ERR_CODE state) override;
+  virtual void onMessageReceivedFromPeer(const char *peerId, const agora::rtm::IMessage *message) override;
  public:
   std::unordered_map<std::string, RtmChannel*> m_channels;
  private:
