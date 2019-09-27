@@ -59,6 +59,8 @@ class RtmServerController : public Nan::ObjectWrap,
 #define RTM_CONNECTION_STATE_CHANGED "ConnectionStateChanged"
 #define RTM_SEND_MESSAGE_STATE "SendMessageState"
 #define RTM_MESSAGE_RECEIVED_FROM_PEER "MessageReceivedFromPeer"
+#define RTM_RENEW_TOKEN_RESULT "RenewTokenResult"
+#define RTM_TOKEN_EXPIRED "TokenExpired"
  public:
   struct NodeEventCallback
   {
@@ -87,6 +89,8 @@ class RtmServerController : public Nan::ObjectWrap,
       const Nan::FunctionCallbackInfo<v8::Value> &args);
   static void sendMessageToPeer(
       const Nan::FunctionCallbackInfo<v8::Value> &args);
+  static void renewToken(
+      const Nan::FunctionCallbackInfo<v8::Value> &args);
   static void onEvent(
       const Nan::FunctionCallbackInfo<v8::Value> &args);
   static void createChannel(
@@ -100,8 +104,10 @@ class RtmServerController : public Nan::ObjectWrap,
  public:
   virtual void onLoginSuccess();
   virtual void onLoginFailure(agora::rtm::LOGIN_ERR_CODE errorCode);
-  virtual void onLogout();
-  virtual void onConnectionStateChanged(agora::rtm::CONNECTION_STATE state);
+  virtual void onLogout(agora::rtm::LOGOUT_ERR_CODE errorCode);
+  virtual void onConnectionStateChanged(agora::rtm::CONNECTION_STATE state, agora::rtm::CONNECTION_CHANGE_REASON reason);
+  virtual void onRenewTokenResult(const char* token, agora::rtm::RENEW_TOKEN_ERR_CODE errorCode);
+  virtual void onTokenExpired();
   virtual void onSendMessageResult(long long messageId, agora::rtm::PEER_MESSAGE_ERR_CODE state);
   virtual void onMessageReceivedFromPeer(const char *peerId, const agora::rtm::IMessage *message);
  public:

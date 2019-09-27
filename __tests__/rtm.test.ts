@@ -11,6 +11,7 @@ describe('C++ Addon API Test', () => {
       expect(true);
       done();
     })
+    client.initialize(process.env.AGORA_APP_ID)
     client.login(null, 'ttyy')
   })
   it('Join Channel', (done) => {

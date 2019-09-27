@@ -162,6 +162,7 @@ void RtmServerController::Init(Local<Object> exports)
   Nan::SetPrototypeMethod(tpl, "login", login);
   Nan::SetPrototypeMethod(tpl, "logout", logout);
   Nan::SetPrototypeMethod(tpl, "sendMessageToPeer", sendMessageToPeer);
+  Nan::SetPrototypeMethod(tpl, "renewToken", renewToken);
   Nan::SetPrototypeMethod(tpl, "createChannel", createChannel);
   Nan::SetPrototypeMethod(tpl, "onEvent", onEvent);
   Nan::SetPrototypeMethod(tpl, "setParameters", setParameters);
@@ -223,6 +224,20 @@ void RtmServerController::logout(const Nan::FunctionCallbackInfo<v8::Value> &arg
     bool result = instance->controller_->logout();
     napi_set_bool_result(args, result);
   } while (false);
+}
+
+void RtmServerController::renewToken(const Nan::FunctionCallbackInfo<v8::Value> &args)
+{
+  NodeString token;
+  napi_get_value_nodestring_(args[0], token);
+
+  Isolate *isolate = Isolate::GetCurrent();
+  HandleScope scope(isolate);
+  RtmServerController *instance = ObjectWrap::Unwrap<RtmServerController>(args.Holder());
+
+  int result = instance->controller_->renewToken(token);
+
+  napi_set_int_result(args, result);
 }
 
 void RtmServerController::sendMessageToPeer(const Nan::FunctionCallbackInfo<v8::Value> &args)
@@ -359,17 +374,32 @@ void RtmServerController::onLoginFailure(agora::rtm::LOGIN_ERR_CODE errorCode)
   });
 }
 
-void RtmServerController::onLogout()
+void RtmServerController::onLogout(agora::rtm::LOGOUT_ERR_CODE errorCode)
 {
-  agora::lb_linux_sdk::node_async_call::async_call([this]() {
-    MAKE_JS_CALL_0(RTM_LOGOUT);
+  agora::lb_linux_sdk::node_async_call::async_call([this, errorCode]() {
+    MAKE_JS_CALL_1(RTM_LOGOUT, int32, errorCode);
   });
 }
 
-void RtmServerController::onConnectionStateChanged(agora::rtm::CONNECTION_STATE state)
+void RtmServerController::onConnectionStateChanged(agora::rtm::CONNECTION_STATE state, agora::rtm::CONNECTION_CHANGE_REASON reason)
 {
-  agora::lb_linux_sdk::node_async_call::async_call([this, state]() {
-    MAKE_JS_CALL_1(RTM_CONNECTION_STATE_CHANGED, int32, state);
+  agora::lb_linux_sdk::node_async_call::async_call([this, state, reason]() {
+    MAKE_JS_CALL_2(RTM_CONNECTION_STATE_CHANGED, int32, state, int32, reason);
+  });
+}
+
+void RtmServerController::onRenewTokenResult(const char* token, agora::rtm::RENEW_TOKEN_ERR_CODE errorCode)
+{
+  std::string mToken(token);
+  agora::lb_linux_sdk::node_async_call::async_call([this, mToken, errorCode]() {
+    MAKE_JS_CALL_2(RTM_RENEW_TOKEN_RESULT, string, mToken.c_str(), int32, errorCode);
+  });
+}
+
+void RtmServerController::onTokenExpired()
+{
+  agora::lb_linux_sdk::node_async_call::async_call([this]() {
+    MAKE_JS_CALL_0(RTM_TOKEN_EXPIRED);
   });
 }
 

@@ -5,6 +5,7 @@ export interface RTMController {
   initialize(appId: string): number;
   login(token: string | null, uid: string): boolean;
   logout(): boolean;
+  renewToken(token: string): number;
   sendMessageToPeer(peerId: string, message: string): boolean;
   createChannel(channelName: string): RTMChannel;
   setParameters(parameter: string): number;
@@ -29,9 +30,11 @@ export interface RTMChannel {
 export interface RTMControllerEvent {
   LoginSuccess: () => void;
   LoginFailure: (ecode: number) => void;
-  Logout: () => void;
+  Logout: (ecode: number) => void;
   MessageReceivedFromPeer: (peerId: string, message: string) => void;
-  ConnectionStateChanged: (state: number) => void;
+  ConnectionStateChanged: (state: number, ecode: number) => void;
+  RenewTokenResult: (token: string, ecode: number) => void;
+  TokenExpired: () => void;
   SendMessageState: (messageId: number, state: number) => void;
 }
 

@@ -174,6 +174,10 @@ class AgoraRtmSDK extends EventEmitter {
     });
   }
 
+  public renewToken(token: string) {
+    return this.sdk.renewToken(token);
+  }
+
   public sendMessageToPeer(peerId: string, message: string) {
     return this.sdk.sendMessageToPeer(peerId, message);
   }
@@ -206,12 +210,20 @@ class AgoraRtmSDK extends EventEmitter {
       }
     );
 
-    this.sdk.onEvent("Logout", () => {
-      this.fire("Logout");
+    this.sdk.onEvent("Logout", (ecode: number) => {
+      this.fire("Logout", ecode);
     });
 
-    this.sdk.onEvent("ConnectionStateChanged", (state: number) => {
-      this.fire("ConnectionStateChanged", state);
+    this.sdk.onEvent("ConnectionStateChanged", (state: number, code: number) => {
+      this.fire("ConnectionStateChanged", state, code);
+    });
+
+    this.sdk.onEvent("RenewTokenResult", (token: string, ecode: number) => {
+      this.fire("RenewTokenResult", token, ecode);
+    });
+
+    this.sdk.onEvent("TokenExpired", () => {
+      this.fire("TokenExpired");
     });
 
     this.sdk.onEvent("SendMessageState", (messageId: number, state: number) => {
