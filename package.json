@@ -12,7 +12,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest --setupFiles dotenv/config --forceExit",
-    "postinstall": "build:ts",
+    "postinstall": "npm run build:ts",
     "build:addon": "node-gyp rebuild",
     "build:debug": "node-gyp rebuild --debug && mv build/Debug build/Release",
     "build:ts": "tsc"
