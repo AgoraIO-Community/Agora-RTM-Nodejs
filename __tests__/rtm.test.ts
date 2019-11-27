@@ -23,7 +23,7 @@ describe('C++ Addon API Test', () => {
     })
     channel.join()
   })
-  it('GetMembers', (done) => {
+  xit('GetMembers', (done) => {
     channel.onEvent('GetMembers', members => {
       expect(true);
       done();

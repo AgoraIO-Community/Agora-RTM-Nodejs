@@ -11,6 +11,18 @@ describe('Adapter API Test', () => {
     expect(true)
   })
 
+  it('query peer status', async() => {
+    const cb = jest.fn()
+    const engine1 = new AgoraRTM();
+    engine1.initialize(process.env.AGORA_APP_ID)
+    await engine1.login(null, 'ttyy1')
+    engine1.on('QueryPeersOnlineStatusResult', cb)
+    engine1.queryPeersOnlineStatus(["tes"])
+    setTimeout(() => {
+      expect(cb).toBeCalledTimes(1);
+    }, 3000)
+  })
+
   it('Invalid channel', async() => {
     const cb = jest.fn()
     const engine1 = new AgoraRTM();
