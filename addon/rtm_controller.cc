@@ -9,6 +9,7 @@
 
 #include <utility>
 #include <sstream>
+#include <nan.h>
 #include "node_napi_api.h"
 #include "node_async_queue.h"
 #include "rtm_channel_event_handler.h"
@@ -23,6 +24,8 @@ uv_async_t async;
 static Nan::Persistent<v8::Function> constructor;
 
 using namespace v8;
+
+typedef long long __int64;
 
 #define MAKE_JS_CALL_0(ev)                                               \
   auto it = m_callbacks.find(ev);                                        \
@@ -166,6 +169,7 @@ void RtmServerController::Init(Local<Object> exports)
   Nan::SetPrototypeMethod(tpl, "createChannel", createChannel);
   Nan::SetPrototypeMethod(tpl, "onEvent", onEvent);
   Nan::SetPrototypeMethod(tpl, "setParameters", setParameters);
+  Nan::SetPrototypeMethod(tpl, "queryPeersOnlineStatus", queryPeersOnlineStatus);
 
   constructor.Reset(tpl->GetFunction());
   exports->Set(Nan::New("RtmServerController").ToLocalChecked(), tpl->GetFunction());
@@ -301,6 +305,45 @@ void RtmServerController::createChannel(const Nan::FunctionCallbackInfo<v8::Valu
   } while (false);
 }
 
+void RtmServerController::queryPeersOnlineStatus(const Nan::FunctionCallbackInfo<v8::Value> &args)
+{
+  if(args.Length() < 1) {
+    Nan::ThrowTypeError("expected 1 argument but received 0");
+    return;
+  }
+
+  if(!args[0]->IsArray()) {
+    Nan::ThrowTypeError("expected array argument");
+    return;
+  }
+
+  Isolate *isolate = Isolate::GetCurrent();
+  HandleScope scope(isolate);
+  RtmServerController *instance = ObjectWrap::Unwrap<RtmServerController>(args.Holder());
+  
+  if(instance == nullptr) {
+    Nan::ThrowTypeError("rtm service not intialized");
+    return;
+  }
+
+  Local<Array> array = Local<Array>::Cast(args[0]);
+  u_int32_t length = array->Length();
+  const char** peerIds = new const char*[length]();
+  for (unsigned int i = 0; i < array->Length(); i++ ) {
+  if (Nan::Has(array, i).FromJust()) {
+    //assuming the argument is an array of 'double' values, for any other type the following line will be changed to do the conversion
+    Local<Value> peerId = Nan::Get(array, i).ToLocalChecked();
+    NodeString sPeerId;
+    napi_get_value_nodestring_(peerId, sPeerId);
+    peerIds[i] = string(sPeerId).c_str();
+  }
+  long long requestId;
+  int result = instance->controller_->queryPeersOnlineStatus(peerIds, length, requestId);
+  napi_set_int_result(args, requestId);
+}
+  
+}
+
 void RtmServerController::onEvent(const Nan::FunctionCallbackInfo<v8::Value> &args)
 {
   do
@@ -416,6 +459,39 @@ void RtmServerController::onMessageReceivedFromPeer(const char *peerId, const ag
   std::string mText = std::string(message->getText());
   agora::lb_linux_sdk::node_async_call::async_call([this, mPeerId, mText]() {
     MAKE_JS_CALL_2(RTM_MESSAGE_RECEIVED_FROM_PEER, string, mPeerId.c_str(), string, mText.c_str());
+  });
+}
+
+void RtmServerController::onQueryPeersOnlineStatusResult(long long requestId, const agora::rtm::PeerOnlineStatus* peersStatus, int peerCount, agora::rtm::QUERY_PEERS_ONLINE_STATUS_ERR errorCode)
+{
+  std::vector<agora::rtm::PeerOnlineStatus> status;
+  for(int i = 0; i < peerCount; i++) {
+    PeerOnlineStatus peerStatus;
+    peerStatus.onlineState = peersStatus[i].onlineState;
+    peerStatus.peerId = string(peersStatus[i].peerId);
+    status.push_back(peersStatus[i]);
+  }
+  agora::lb_linux_sdk::node_async_call::async_call([this, requestId, status, peerCount, errorCode]() {
+    auto it = m_callbacks.find(RTM_QUERY_PEERS_RESULT);
+    if (it != m_callbacks.end()) {
+      Isolate *isolate = Isolate::GetCurrent();
+      Nan::HandleScope scope;
+      Local<Number> nRequestId = Nan::New<Number>(requestId);
+      Local<Uint32> nErrorCode = Nan::New<Uint32>(errorCode);
+      Local<Array> nPeersStatus = Nan::New<Array>(peerCount);
+
+      for(int i = 0; i < peerCount; i++) {
+          Local<Object> peerStatus = Nan::New<Object>();
+          peerStatus->Set(Nan::New<String>("peerId").ToLocalChecked(), Nan::New<String>(status[i].peerId).ToLocalChecked());
+          peerStatus->Set(Nan::New<String>("onlineState").ToLocalChecked(), Nan::New<Uint32>(status[i].onlineState));
+          nPeersStatus->Set(i, peerStatus);
+      }
+
+      Local<Value> argv[3]{ nRequestId, nErrorCode, nPeersStatus};
+      NodeEventCallback& cb = *it->second;
+      cb.callback.Get(isolate)->Call(cb.js_this.Get(isolate), 3, argv);
+    }
+    
   });
 }
 

@@ -13,6 +13,7 @@ export interface RTMController {
     eventName: E,
     callback: RTMControllerEvent[E]
   ): void;
+  queryPeersOnlineStatus(peerIds:string[]): number;
 }
 
 export interface RTMChannel {
@@ -36,6 +37,7 @@ export interface RTMControllerEvent {
   RenewTokenResult: (token: string, ecode: number) => void;
   TokenExpired: () => void;
   SendMessageState: (messageId: number, state: number) => void;
+  QueryPeersOnlineStatusResult: (requestId: number, peersStatus:any, errorCode: number) => void;
 }
 
 export interface RTMChannelEvent {

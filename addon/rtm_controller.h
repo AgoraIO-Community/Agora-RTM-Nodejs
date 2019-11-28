@@ -61,6 +61,7 @@ class RtmServerController : public Nan::ObjectWrap,
 #define RTM_MESSAGE_RECEIVED_FROM_PEER "MessageReceivedFromPeer"
 #define RTM_RENEW_TOKEN_RESULT "RenewTokenResult"
 #define RTM_TOKEN_EXPIRED "TokenExpired"
+#define RTM_QUERY_PEERS_RESULT "QueryPeersOnlineStatusResult"
  public:
   struct NodeEventCallback
   {
@@ -77,6 +78,10 @@ class RtmServerController : public Nan::ObjectWrap,
       delete success;
       delete fail;
     }
+  };
+  struct PeerOnlineStatus{
+    std::string peerId;
+    agora::rtm::PEER_ONLINE_STATE onlineState;
   };
   RtmChannel* getChannel(std::string& cname);
   void addEventHandler(const std::string& eventName, Persistent<Object>& obj, Persistent<Function>& callback);
@@ -96,6 +101,7 @@ class RtmServerController : public Nan::ObjectWrap,
   static void createChannel(
       const Nan::FunctionCallbackInfo<v8::Value> &args);
   static void setParameters(const Nan::FunctionCallbackInfo<v8::Value> &args);
+  static void queryPeersOnlineStatus(const Nan::FunctionCallbackInfo<v8::Value> &args);
 
  private:
   RtmServerController();
@@ -110,6 +116,7 @@ class RtmServerController : public Nan::ObjectWrap,
   virtual void onTokenExpired() override;
   virtual void onSendMessageResult(long long messageId, agora::rtm::PEER_MESSAGE_ERR_CODE state) override;
   virtual void onMessageReceivedFromPeer(const char *peerId, const agora::rtm::IMessage *message) override;
+  virtual void onQueryPeersOnlineStatusResult(long long requestId, const agora::rtm::PeerOnlineStatus* peersStatus, int peerCount, agora::rtm::QUERY_PEERS_ONLINE_STATUS_ERR errorCode) override;
  public:
   std::unordered_map<std::string, RtmChannel*> m_channels;
  private:

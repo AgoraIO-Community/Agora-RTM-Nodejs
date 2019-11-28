@@ -76,6 +76,7 @@ export class AgoraRtmChannel extends EventEmitter {
   public getMembers() {
     return this.channel.getMembers();
   }
+   
 
   private subscribeEvents = () => {
     this.channel.onEvent("JoinSuccess", () => {
@@ -194,6 +195,10 @@ class AgoraRtmSDK extends EventEmitter {
     return this.sdk.setParameters(param);
   }
 
+  public queryPeersOnlineStatus(peerIds:string[]) {
+    return this.sdk.queryPeersOnlineStatus(peerIds || [])
+  }
+
   private subscribeEvents = () => {
     this.sdk.onEvent("LoginSuccess", () => {
       this.fire("LoginSuccess");
@@ -228,6 +233,10 @@ class AgoraRtmSDK extends EventEmitter {
 
     this.sdk.onEvent("SendMessageState", (messageId: number, state: number) => {
       this.fire("SendMessageState", messageId, state);
+    });
+
+    this.sdk.onEvent("QueryPeersOnlineStatusResult", (requestId: number, peersStatus:any, errorCode: number) => {
+      this.fire("QueryPeersOnlineStatusResult", requestId, peersStatus, errorCode)
     });
   };
 }
