@@ -79,6 +79,10 @@ class RtmServerController : public Nan::ObjectWrap,
       delete fail;
     }
   };
+  struct PeerOnlineStatus{
+    std::string peerId;
+    agora::rtm::PEER_ONLINE_STATE onlineState;
+  };
   RtmChannel* getChannel(std::string& cname);
   void addEventHandler(const std::string& eventName, Persistent<Object>& obj, Persistent<Function>& callback);
   static void Init(v8::Local<v8::Object> exports);

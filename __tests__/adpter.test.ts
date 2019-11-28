@@ -11,19 +11,21 @@ describe('Adapter API Test', () => {
     expect(true)
   })
 
-  it('query peer status', async() => {
+  it('query peer status', async(done) => {
     const cb = jest.fn()
     const engine1 = new AgoraRTM();
     engine1.initialize(process.env.AGORA_APP_ID)
     await engine1.login(null, 'ttyy1')
-    engine1.on('QueryPeersOnlineStatusResult', cb)
-    engine1.queryPeersOnlineStatus(["tes"])
-    setTimeout(() => {
-      expect(cb).toBeCalledTimes(1);
-    }, 3000)
+    engine1.on('QueryPeersOnlineStatusResult', () => {
+      expect(true)
+      done()
+    })
+    engine1.queryPeersOnlineStatus(["ttyy1"])
   })
 
-  it('Invalid channel', async() => {
+  // disable since createChannel no longer returns null for invalid channel name
+  // since 1.2.0
+  xit('Invalid channel', async() => {
     const cb = jest.fn()
     const engine1 = new AgoraRTM();
     engine1.initialize(process.env.AGORA_APP_ID)

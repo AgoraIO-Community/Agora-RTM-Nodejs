@@ -25,6 +25,8 @@ static Nan::Persistent<v8::Function> constructor;
 
 using namespace v8;
 
+typedef long long __int64;
+
 #define MAKE_JS_CALL_0(ev)                                               \
   auto it = m_callbacks.find(ev);                                        \
   if (it != m_callbacks.end())                                           \
@@ -333,10 +335,10 @@ void RtmServerController::queryPeersOnlineStatus(const Nan::FunctionCallbackInfo
     Local<Value> peerId = Nan::Get(array, i).ToLocalChecked();
     NodeString sPeerId;
     napi_get_value_nodestring_(peerId, sPeerId);
-    peerIds[i] = sPeerId;
+    peerIds[i] = string(sPeerId).c_str();
   }
   long long requestId;
-  instance->controller_->queryPeersOnlineStatus(peerIds, length, requestId);
+  int result = instance->controller_->queryPeersOnlineStatus(peerIds, length, requestId);
   napi_set_int_result(args, requestId);
 }
   
@@ -464,12 +466,16 @@ void RtmServerController::onQueryPeersOnlineStatusResult(long long requestId, co
 {
   std::vector<agora::rtm::PeerOnlineStatus> status;
   for(int i = 0; i < peerCount; i++) {
+    PeerOnlineStatus peerStatus;
+    peerStatus.onlineState = peersStatus[i].onlineState;
+    peerStatus.peerId = string(peersStatus[i].peerId);
     status.push_back(peersStatus[i]);
   }
-  agora::lb_linux_sdk::node_async_call::async_call([this, requestId, &status, peerCount, errorCode]() {
+  agora::lb_linux_sdk::node_async_call::async_call([this, requestId, status, peerCount, errorCode]() {
     auto it = m_callbacks.find(RTM_QUERY_PEERS_RESULT);
     if (it != m_callbacks.end()) {
       Isolate *isolate = Isolate::GetCurrent();
+      Nan::HandleScope scope;
       Local<Number> nRequestId = Nan::New<Number>(requestId);
       Local<Uint32> nErrorCode = Nan::New<Uint32>(errorCode);
       Local<Array> nPeersStatus = Nan::New<Array>(peerCount);
@@ -477,7 +483,6 @@ void RtmServerController::onQueryPeersOnlineStatusResult(long long requestId, co
       for(int i = 0; i < peerCount; i++) {
           Local<Object> peerStatus = Nan::New<Object>();
           peerStatus->Set(Nan::New<String>("peerId").ToLocalChecked(), Nan::New<String>(status[i].peerId).ToLocalChecked());
-          peerStatus->Set(Nan::New<String>("isOnline").ToLocalChecked(), Nan::New<Boolean>(status[i].isOnline));
           peerStatus->Set(Nan::New<String>("onlineState").ToLocalChecked(), Nan::New<Uint32>(status[i].onlineState));
           nPeersStatus->Set(i, peerStatus);
       }
