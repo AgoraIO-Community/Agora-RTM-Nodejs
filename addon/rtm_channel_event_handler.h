@@ -6,7 +6,6 @@
 #include <uv.h>
 #include "node_napi_api.h"
 #include "rtm_controller.h"
-#include "IAgoraService.h"
 #include "IAgoraRtmService.h"
 namespace agora {
     namespace lb_linux_sdk {

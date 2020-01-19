@@ -385,10 +385,7 @@ void RtmServerController::addEventHandler(const std::string &eventName, Persiste
 
 RtmServerController::RtmServerController()
 {
-  agora::base::IAgoraService *agora_server = createAgoraService();
-  agora_service_ = agora_server;
-  agora_service_->initialize(ctx);
-  agora::rtm::IRtmService *p_rs = agora_service_->createRtmService();
+  agora::rtm::IRtmService *p_rs = agora::rtm::createRtmService();
   // enable console and debug output
   std::ostringstream out;
   out << "{\"rtm.log_filter\": " << 0xffff << "}";

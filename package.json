@@ -15,7 +15,11 @@
     "postinstall": "npm run build:ts",
     "build:addon": "node-gyp rebuild",
     "build:debug": "node-gyp rebuild --debug && mv build/Debug build/Release",
-    "build:ts": "tsc"
+    "build:ts": "tsc",
+    "sync:lib": "just sync:lib && sudo cp sdk/libagora_rtm_sdk.so /usr/lib/"
+  },
+  "agora": {
+    "liburl": "https://download.agora.io/rtmsdk/release/Agora_RTM_SDK_for_Linux_v1_2_2.zip?_ga=2.22727995.1663946580.1579401405-565952542.1562048466"
   },
   "babel": {
     "presets": [
@@ -72,8 +76,13 @@
     "@pika/plugin-standard-pkg": "0.3.14",
     "@types/jest": "24.0.11",
     "@types/node": "^11.11.3",
+    "bluebird": "^3.7.2",
     "dotenv": "^7.0.0",
+    "download": "^7.1.0",
+    "extract-zip": "^1.6.7",
+    "glob": "^7.1.6",
     "jest": "24.4.0",
+    "just-task": "^0.14.0",
     "nan": "^2.13.0",
     "typescript": "3.3.3333"
   },

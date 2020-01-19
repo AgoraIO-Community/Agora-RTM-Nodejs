@@ -18,7 +18,6 @@
 #include <node.h>
 #include <iostream>
 #include <node_object_wrap.h>
-#include "IAgoraService.h"
 #include "IAgoraRtmService.h"
 
 using v8::Persistent;
@@ -120,8 +119,6 @@ class RtmServerController : public Nan::ObjectWrap,
  public:
   std::unordered_map<std::string, RtmChannel*> m_channels;
  private:
-  agora::base::AgoraServiceContext ctx;
-  agora::base::IAgoraService* agora_service_;
   agora::rtm::IRtmService* controller_;
   std::unordered_map<std::string, NodeEventCallback*> m_callbacks;
   std::unordered_map<std::string, CommandPrivData*> m_commands;
