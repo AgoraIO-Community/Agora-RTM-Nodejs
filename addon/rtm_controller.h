@@ -18,7 +18,6 @@
 #include <node.h>
 #include <iostream>
 #include <node_object_wrap.h>
-#include "node_log.h"
 #include "IAgoraRtmService.h"
 
 using v8::Persistent;

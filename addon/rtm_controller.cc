@@ -186,42 +186,51 @@ void RtmServerController::New(const Nan::FunctionCallbackInfo<Value> &args)
 
 void RtmServerController::initialize(const Nan::FunctionCallbackInfo<v8::Value> &args)
 {
-  NodeString app_id, user_id, token;
-  uint32_t cid;
-  Local<Function> success, fail;
-  napi_get_value_nodestring_(args[0], app_id);
+  
+  do {
+    NodeString app_id, user_id, token;
+    uint32_t cid;
+    Local<Function> success, fail;
+    napi_get_value_nodestring_(args[0], app_id);
 
-  Isolate *isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
-  RtmServerController *instance = ObjectWrap::Unwrap<RtmServerController>(args.Holder());
-  int result = instance->controller_->initialize(app_id, instance);
-  napi_set_int_result(args, result);
+    Isolate *isolate = Isolate::GetCurrent();
+    HandleScope scope(isolate);
+    RtmServerController *instance = ObjectWrap::Unwrap<RtmServerController>(args.Holder());
+    int result = instance->controller_->initialize(app_id, instance);
+    napi_set_int_result(args, result);
+  } while(false);
+  
 }
 
 void RtmServerController::login(const Nan::FunctionCallbackInfo<v8::Value> &args)
 {
-  NodeString user_id, token;
-  uint32_t cid;
-  Local<Function> success, fail;
-  napi_get_value_nodestring_(args[1], user_id);
+  
+  do {
+    NodeString user_id, token;
+    uint32_t cid;
+    Local<Function> success, fail;
+    napi_get_value_nodestring_(args[1], user_id);
 
-  Isolate *isolate = Isolate::GetCurrent();
-  HandleScope scope(isolate);
-  RtmServerController *instance = ObjectWrap::Unwrap<RtmServerController>(args.Holder());
+    Isolate *isolate = Isolate::GetCurrent();
+    HandleScope scope(isolate);
+    RtmServerController *instance = ObjectWrap::Unwrap<RtmServerController>(args.Holder());
 
-  bool result = true;
-  if(args[0]->IsNull()) {
-    result = instance->controller_->login(NULL, user_id);
-  } else {
-    napi_get_value_nodestring_(args[0], token);
-    result = instance->controller_->login(token, user_id);
-  }
+    bool result = true;
+    if(args[0]->IsNull()) {
+      result = instance->controller_->login(NULL, user_id);
+    } else {
+      napi_get_value_nodestring_(args[0], token);
+      result = instance->controller_->login(token, user_id);
+    }
 
-  napi_set_int_result(args, result);
+    napi_set_int_result(args, result);
+  } while(false);
+  
 }
 
 void RtmServerController::logout(const Nan::FunctionCallbackInfo<v8::Value> &args)
 {
+  
   do
   {
     Isolate *isolate = Isolate::GetCurrent();
@@ -230,6 +239,7 @@ void RtmServerController::logout(const Nan::FunctionCallbackInfo<v8::Value> &arg
     bool result = instance->controller_->logout();
     napi_set_bool_result(args, result);
   } while (false);
+  
 }
 
 void RtmServerController::setLogFile(const Nan::FunctionCallbackInfo<v8::Value> &args)
