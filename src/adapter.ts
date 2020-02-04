@@ -179,6 +179,14 @@ class AgoraRtmSDK extends EventEmitter {
     return this.sdk.renewToken(token);
   }
 
+  public setLogFile(filePath: string) {
+    return this.sdk.setLogFile(filePath)
+  }
+
+  public setLogFileSize(fileSize: number) {
+    return this.sdk.setLogFileSize(fileSize)
+  }
+
   public sendMessageToPeer(peerId: string, message: string) {
     return this.sdk.sendMessageToPeer(peerId, message);
   }

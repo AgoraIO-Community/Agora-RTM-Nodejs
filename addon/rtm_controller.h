@@ -18,6 +18,7 @@
 #include <node.h>
 #include <iostream>
 #include <node_object_wrap.h>
+#include "node_log.h"
 #include "IAgoraRtmService.h"
 
 using v8::Persistent;
@@ -93,6 +94,8 @@ class RtmServerController : public Nan::ObjectWrap,
       const Nan::FunctionCallbackInfo<v8::Value> &args);
   static void sendMessageToPeer(
       const Nan::FunctionCallbackInfo<v8::Value> &args);
+  static void setLogFile(const Nan::FunctionCallbackInfo<v8::Value> &args);
+  static void setLogFileSize(const Nan::FunctionCallbackInfo<v8::Value> &args);
   static void renewToken(
       const Nan::FunctionCallbackInfo<v8::Value> &args);
   static void onEvent(

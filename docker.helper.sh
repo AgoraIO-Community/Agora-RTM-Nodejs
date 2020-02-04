@@ -1,10 +1,10 @@
 # delete build/
-rm -rf build
+sudo rm -rf build
 # rebuild image
-docker build -t agora/rtm .
+sudo docker build -t agora/rtm .
 # kill old container
 # docker kill $(docker ps -a -q --filter="name=rtminstance")
 # run new contaienr 
-docker run --name rtminstance -d agora/rtm 
+sudo docker run --name rtminstance -d agora/rtm 
 # copy build/ to outside
-docker cp $(docker ps -a -q --filter="name=rtminstance"):/usr/src/app/build ./build
+sudo docker cp $(docker ps -a -q --filter="name=rtminstance"):/usr/src/app/build ./build

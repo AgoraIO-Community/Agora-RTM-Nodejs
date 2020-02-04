@@ -164,6 +164,8 @@ void RtmServerController::Init(Local<Object> exports)
   Nan::SetPrototypeMethod(tpl, "initialize", initialize);
   Nan::SetPrototypeMethod(tpl, "login", login);
   Nan::SetPrototypeMethod(tpl, "logout", logout);
+  Nan::SetPrototypeMethod(tpl, "setLogFile", setLogFile);
+  Nan::SetPrototypeMethod(tpl, "setLogFileSize", setLogFileSize);
   Nan::SetPrototypeMethod(tpl, "sendMessageToPeer", sendMessageToPeer);
   Nan::SetPrototypeMethod(tpl, "renewToken", renewToken);
   Nan::SetPrototypeMethod(tpl, "createChannel", createChannel);
@@ -227,6 +229,40 @@ void RtmServerController::logout(const Nan::FunctionCallbackInfo<v8::Value> &arg
     RtmServerController *instance = ObjectWrap::Unwrap<RtmServerController>(args.Holder());
     bool result = instance->controller_->logout();
     napi_set_bool_result(args, result);
+  } while (false);
+}
+
+void RtmServerController::setLogFile(const Nan::FunctionCallbackInfo<v8::Value> &args)
+{
+  do
+  {
+    NodeString filePath;
+    napi_get_value_nodestring_(args[0], filePath);
+
+    Isolate *isolate = Isolate::GetCurrent();
+    HandleScope scope(isolate);
+    RtmServerController *instance = ObjectWrap::Unwrap<RtmServerController>(args.Holder());
+
+    int result = instance->controller_->setLogFile(filePath);
+
+    napi_set_int_result(args, result);
+  } while (false);
+}
+
+void RtmServerController::setLogFileSize(const Nan::FunctionCallbackInfo<v8::Value> &args)
+{
+  do
+  {
+    int fileSize;
+    napi_get_value_int32_(args[0], fileSize);
+
+    Isolate *isolate = Isolate::GetCurrent();
+    HandleScope scope(isolate);
+    RtmServerController *instance = ObjectWrap::Unwrap<RtmServerController>(args.Holder());
+
+    int result = instance->controller_->setLogFileSize(fileSize);
+
+    napi_set_int_result(args, result);
   } while (false);
 }
 

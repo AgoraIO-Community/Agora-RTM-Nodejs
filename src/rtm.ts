@@ -6,6 +6,8 @@ export interface RTMController {
   login(token: string | null, uid: string): boolean;
   logout(): boolean;
   renewToken(token: string): number;
+  setLogFile(filePath: string): number;
+  setLogFileSize(fileSize: number): number;
   sendMessageToPeer(peerId: string, message: string): boolean;
   createChannel(channelName: string): RTMChannel;
   setParameters(parameter: string): number;
