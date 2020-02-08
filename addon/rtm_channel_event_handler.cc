@@ -3,6 +3,8 @@
 #include "node_uid.h"
 #include "uv.h"
 #include "node_async_queue.h"
+#include "log.h"
+
 namespace agora {
     namespace lb_linux_sdk {
 
@@ -130,19 +132,24 @@ namespace agora {
         }
 
         void RtmChannelEventHandler::onMemberJoined(agora::rtm::IChannelMember *member) {
+            LOG2(Info, "onMemberJoined %s %s", member->getUserId(), member->getChannelId());
+            
             std::string mUserId(member->getUserId());
             std::string mChannelId(member->getChannelId());
             
             agora::lb_linux_sdk::node_async_call::async_call([this, mUserId, mChannelId]() {
+                LOG2(Info, "async onMemberJoined %s %s", mUserId.c_str(), mChannelId.c_str());
                 MAKE_JS_CALL_2(RTM_CHANNEL_MEMBER_JOINED, string, mUserId.c_str(), string, mChannelId.c_str());
             });
         }
 
         void RtmChannelEventHandler::onMemberLeft(agora::rtm::IChannelMember *member) {
+            LOG2(Info, "onMemberLeft %s %s", member->getUserId(), member->getChannelId());
             std::string mUserId(member->getUserId());
             std::string mChannelId(member->getChannelId());
 
             agora::lb_linux_sdk::node_async_call::async_call([this, mUserId, mChannelId]() {
+                LOG2(Info, "async onMemberLeft %s %s", mUserId.c_str(), mChannelId.c_str());
                 MAKE_JS_CALL_2(RTM_CHANNEL_MEMBER_LEFT, string, mUserId.c_str(), string, mChannelId.c_str());
             });
         }

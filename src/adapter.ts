@@ -1,5 +1,4 @@
 import EventEmitter from "events";
-
 import * as AgoraRTM from "./rtm";
 import Mutex from "./mutex";
 
@@ -70,7 +69,7 @@ export class AgoraRtmChannel extends EventEmitter {
   }
 
   public sendMessage(message: string) {
-    return this.channel.sendMessage(message);
+    return this.channel.sendMessage(message || "");
   }
 
   public getMembers() {
@@ -176,23 +175,23 @@ class AgoraRtmSDK extends EventEmitter {
   }
 
   public renewToken(token: string) {
-    return this.sdk.renewToken(token);
+    return this.sdk.renewToken(token || "");
   }
 
   public setLogFile(filePath: string) {
-    return this.sdk.setLogFile(filePath)
+    return this.sdk.setLogFile(filePath || "")
   }
 
   public setLogFileSize(fileSize: number) {
-    return this.sdk.setLogFileSize(fileSize)
+    return this.sdk.setLogFileSize(fileSize || 1024)
   }
 
   public sendMessageToPeer(peerId: string, message: string) {
-    return this.sdk.sendMessageToPeer(peerId, message);
+    return this.sdk.sendMessageToPeer(peerId || "", message || "");
   }
 
   public createChannel(cname: string) {
-    let channel = this.sdk.createChannel(cname)
+    let channel = this.sdk.createChannel(cname || "")
     if(channel === null) {
       return null
     }
@@ -200,7 +199,7 @@ class AgoraRtmSDK extends EventEmitter {
   }
 
   public setParameters(param: string) {
-    return this.sdk.setParameters(param);
+    return this.sdk.setParameters(param || "");
   }
 
   public queryPeersOnlineStatus(peerIds:string[]) {

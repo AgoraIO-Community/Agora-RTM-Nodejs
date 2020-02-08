@@ -17,8 +17,6 @@ RUN npm install --ignore-scripts --verbose
 # Bundle app source
 COPY . .
 
-RUN npm run sync-download:lib
-
 COPY ./sdk/libagora_rtm_sdk.so /usr/lib/
 
 RUN npm run build:addon

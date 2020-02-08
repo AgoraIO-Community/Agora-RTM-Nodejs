@@ -4,6 +4,10 @@
     "sources": [
       "addon/node_uid.h",
       "addon/node_uid.cpp",
+      "addon/log.h",
+      "addon/log.cpp",
+      "addon/syslog_log.h",
+      "addon/syslog_log.cpp",
       "addon/node_napi_api.h",
       "addon/node_napi_api.cpp",
       "addon/node_async_queue.cpp",

@@ -13,6 +13,7 @@
 #include "node_napi_api.h"
 #include "node_async_queue.h"
 #include "rtm_channel_event_handler.h"
+#include "log.h"
 
 using std::cout;
 using std::endl;
@@ -214,6 +215,9 @@ void RtmServerController::login(const Nan::FunctionCallbackInfo<v8::Value> &args
     Isolate *isolate = Isolate::GetCurrent();
     HandleScope scope(isolate);
     RtmServerController *instance = ObjectWrap::Unwrap<RtmServerController>(args.Holder());
+
+    std::string mUserId = (std::string)user_id;
+    LOG2(Info, "login as %s", mUserId.c_str());
 
     bool result = true;
     if(args[0]->IsNull()) {
