@@ -28,6 +28,8 @@ using namespace v8;
 
 typedef long long __int64;
 
+#define MAX_ACCOUNT_LENGTH 64
+
 #define MAKE_JS_CALL_0(ev)                                               \
   auto it = m_callbacks.find(ev);                                        \
   if (it != m_callbacks.end())                                           \
@@ -378,20 +380,21 @@ void RtmServerController::queryPeersOnlineStatus(const Nan::FunctionCallbackInfo
 
   Local<Array> array = Local<Array>::Cast(args[0]);
   u_int32_t length = array->Length();
-  const char** peerIds = new const char*[length]();
+  std::vector<const char*> peerIds;
   for (unsigned int i = 0; i < array->Length(); i++ ) {
-  if (Nan::Has(array, i).FromJust()) {
-    //assuming the argument is an array of 'double' values, for any other type the following line will be changed to do the conversion
-    Local<Value> peerId = Nan::Get(array, i).ToLocalChecked();
-    NodeString sPeerId;
-    napi_get_value_nodestring_(peerId, sPeerId);
-    peerIds[i] = string(sPeerId).c_str();
+    if (Nan::Has(array, i).FromJust()) {
+      //assuming the argument is an array of 'double' values, for any other type the following line will be changed to do the conversion
+      Local<Value> peerId = Nan::Get(array, i).ToLocalChecked();
+      NodeString sPeerId;
+      napi_get_value_nodestring_(peerId, sPeerId);
+      char* cPeerId = new char[MAX_ACCOUNT_LENGTH];
+      memcpy(cPeerId, sPeerId, MAX_ACCOUNT_LENGTH);
+      peerIds.push_back(const_cast<char*>(cPeerId));
+    }
   }
   long long requestId;
-  int result = instance->controller_->queryPeersOnlineStatus(peerIds, length, requestId);
+  int result = instance->controller_->queryPeersOnlineStatus(peerIds.data(), length, requestId);
   napi_set_int_result(args, requestId);
-}
-  
 }
 
 void RtmServerController::onEvent(const Nan::FunctionCallbackInfo<v8::Value> &args)

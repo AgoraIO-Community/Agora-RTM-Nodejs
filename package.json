@@ -11,7 +11,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest --setupFiles dotenv/config --forceExit",
+    "test": "jest --forceExit",
     "postinstall": "npm run build:ts",
     "build:addon": "node-gyp rebuild",
     "build:debug": "node-gyp rebuild --debug && mv build/Debug build/Release",

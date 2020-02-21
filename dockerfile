@@ -23,8 +23,6 @@ RUN npm run build:addon
 
 RUN npm run build:ts
 
-#RUN npm run test
-
 # EXPOSE 8080
 
-# CMD [ "/bin/ls", "./build" ]
+CMD /bin/ls ./build

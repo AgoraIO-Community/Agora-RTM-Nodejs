@@ -16,11 +16,11 @@ describe('Adapter API Test', () => {
     const engine1 = new AgoraRTM();
     engine1.initialize(process.env.AGORA_APP_ID)
     await engine1.login(null, 'ttyy1')
-    engine1.on('QueryPeersOnlineStatusResult', () => {
-      expect(true)
+    engine1.on('QueryPeersOnlineStatusResult', (requestId, errorCode, peersStatus) => {
+      expect(peersStatus.length).toEqual(3)
       done()
     })
-    engine1.queryPeersOnlineStatus(["ttyy1"])
+    engine1.queryPeersOnlineStatus(["ttyy3", "ttyy2", "ttyy4"])
   })
 
   // disable since createChannel no longer returns null for invalid channel name
