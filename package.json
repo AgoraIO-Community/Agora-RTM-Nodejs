@@ -20,7 +20,7 @@
     "install:lib": "just sync:lib && sudo cp sdk/libagora_rtm_sdk.so /usr/lib/"
   },
   "agora": {
-    "liburl": "http://192.168.99.149:8086/v1.2.2_rtm_getMembersQps50In2s/RTMSDK/Linux/Agora_RTM_SDK_for_Linux_v1.2.2_20200206_278.zip"
+    "liburl": "https://download.agora.io/rtmsdk/release/Agora_RTM_SDK_for_Linux_v1_2_2.zip?_ga=2.58691050.1900749775.1582269442-543476706.1582269442"
   },
   "babel": {
     "presets": [
