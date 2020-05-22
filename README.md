@@ -6,7 +6,7 @@ Make sure you have `node-gyp` environment.
 
 Download Agora RTM Linux SDK and extract `libagora_rtm_sdk.so & include/` from it under this project.
 
-If you use docker, just build image and container based on our docker file. Apart from this, you should move `libagora_rtm_sdk.so` to `/usr/lib` manaully.
+If you use docker, just build image and container based on our docker file. Apart from this, you should move `libagora_rtm_sdk.so` to `/usr/lib` manually.
 
 ```bash
 npm install
